@@ -1,6 +1,8 @@
-// Shared data loader for the curated Marvel timeline site.
+// Shared data loader + renderers for the curated Marvel timeline site.
 // All content lives in data/characters.json — edit that file to add
-// characters, variants, bios, and timeline events. No build step needed.
+// characters, variants, timeline events, and stories. No build step needed.
+
+const OVERLAY_SRC = "assets/overlay/frame.png";
 
 async function loadData() {
   const res = await fetch("data/characters.json");
@@ -15,62 +17,155 @@ function el(tag, className, html) {
   return node;
 }
 
-// ---------- Home page: character grid + combined timeline ----------
-
-async function renderHome() {
-  const data = await loadData();
-  renderCharacterGrid(data.characters);
-  renderCombinedTimeline(data.characters);
+// Returns the character's primary (hero-form) variant: primaryVariantId if
+// set, else the first variant flagged isHeroForm, else just the first one.
+function primaryVariant(c) {
+  const variants = c.variants || [];
+  if (c.primaryVariantId) {
+    const match = variants.find((v) => v.id === c.primaryVariantId);
+    if (match) return match;
+  }
+  const hero = variants.find((v) => v.isHeroForm);
+  return hero || variants[0] || null;
 }
 
-function renderCharacterGrid(characters) {
+// A portrait figure with the frame overlay stacked on top.
+function photoMarkup(imgSrc, alt) {
+  return `
+    <img class="portrait-img" src="${imgSrc}" alt="${alt}" loading="lazy" />
+    <img class="overlay-frame" src="${OVERLAY_SRC}" alt="" aria-hidden="true" />
+  `;
+}
+
+// ---------- Nav ----------
+
+function renderNav(activePage) {
+  const mount = document.getElementById("site-nav");
+  if (!mount) return;
+  const tabs = [
+    { key: "characters", label: "Characters", href: "index.html" },
+    { key: "timeline", label: "Timeline", href: "timeline.html" },
+    { key: "stories", label: "Stories", href: "stories.html" },
+  ];
+  mount.innerHTML = `
+    <div class="site-nav-inner">
+      <a class="brand" href="index.html">Marvel Universe: Concise Continuity</a>
+      <div class="tabs">
+        ${tabs
+          .map(
+            (t) =>
+              `<a href="${t.href}" class="${t.key === activePage ? "active" : ""}">${t.label}</a>`
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+// ---------- Characters (roster) page ----------
+
+async function renderCharacterGridPage() {
+  const data = await loadData();
   const grid = document.getElementById("character-grid");
   if (!grid) return;
   grid.innerHTML = "";
-  characters.forEach((c) => {
+  data.characters.forEach((c) => {
+    const hero = primaryVariant(c);
     const card = el("a", "character-card");
     card.href = `character.html?id=${encodeURIComponent(c.id)}`;
     card.innerHTML = `
-      <img src="${c.portrait}" alt="${c.name}" loading="lazy" />
+      <div class="card-photo">
+        ${photoMarkup(hero ? hero.image : "", c.name)}
+      </div>
       <div class="card-body">
         <div class="name">${c.name}</div>
         <div class="codename">${c.codename || ""}</div>
+        <div class="status-tag">${c.status || "Unknown"}</div>
       </div>
     `;
     grid.appendChild(card);
   });
 }
 
-function renderCombinedTimeline(characters) {
-  const container = document.getElementById("timeline");
-  if (!container) return;
+// ---------- Horizontal timeline (used by timeline.html and character.html) ----------
 
-  // Flatten every character's timeline events into one chronological feed.
+function buildTimelineTrack(mountEl, events) {
+  mountEl.innerHTML = "";
+  if (events.length === 0) {
+    mountEl.appendChild(el("div", "empty-state", "No timeline events yet."));
+    return;
+  }
+  const scroll = el("div", "timeline-scroll");
+  const track = el("div", "timeline-track");
+  events.forEach((e) => {
+    const stop = el("div", "timeline-stop");
+    const whoLink = e.characterId
+      ? `<a class="who" href="character.html?id=${encodeURIComponent(e.characterId)}">${e.characterName || ""}</a>`
+      : "";
+    stop.innerHTML = `
+      <div class="date">${e.date}</div>
+      <div class="dot"></div>
+      <div class="card">
+        ${whoLink}
+        <div class="title">${e.title}</div>
+        <div class="summary${e.summary && e.summary.startsWith("PLACEHOLDER") ? " placeholder" : ""}">${e.summary || ""}</div>
+      </div>
+    `;
+    track.appendChild(stop);
+  });
+  scroll.appendChild(track);
+  mountEl.appendChild(scroll);
+}
+
+async function renderTimelinePage() {
+  const data = await loadData();
   const events = [];
-  characters.forEach((c) => {
+  data.characters.forEach((c) => {
     (c.timelineEvents || []).forEach((e) => {
       events.push({ ...e, characterName: c.name, characterId: c.id });
     });
   });
-
   events.sort((a, b) => String(a.date).localeCompare(String(b.date)));
+  const mount = document.getElementById("timeline");
+  if (mount) buildTimelineTrack(mount, events);
+}
 
-  container.innerHTML = "";
-  if (events.length === 0) {
-    container.appendChild(el("div", "empty-state", "No timeline events yet."));
+// ---------- Stories page ----------
+
+async function renderStoriesPage() {
+  const data = await loadData();
+  const mount = document.getElementById("stories-list");
+  if (!mount) return;
+  const stories = data.stories || [];
+  mount.innerHTML = "";
+  if (stories.length === 0) {
+    mount.appendChild(
+      el(
+        "div",
+        "empty-state",
+        "No curated stories yet. Add entries to the <code>stories</code> array in data/characters.json — each with an id, title, date, involved characterIds, and a summary."
+      )
+    );
     return;
   }
-
-  events.forEach((e) => {
-    const item = el("div", "timeline-item");
-    item.innerHTML = `
-      <div class="date">${e.date}</div>
-      <div class="title">${e.title}</div>
-      <div class="who"><a href="character.html?id=${encodeURIComponent(e.characterId)}" style="color:inherit;text-decoration:none;">${e.characterName}</a></div>
-      <div class="summary${e.summary && e.summary.startsWith("PLACEHOLDER") ? " placeholder" : ""}">${e.summary || ""}</div>
-    `;
-    container.appendChild(item);
-  });
+  stories
+    .slice()
+    .sort((a, b) => String(a.date).localeCompare(String(b.date)))
+    .forEach((s) => {
+      const card = el("div", "story-card");
+      const names = (s.characterIds || [])
+        .map((id) => {
+          const c = data.characters.find((x) => x.id === id);
+          return c ? c.name : id;
+        })
+        .join(" · ");
+      card.innerHTML = `
+        <div class="story-title">${s.title}</div>
+        <div class="story-meta">${s.date || ""}${names ? " — " + names : ""}</div>
+        <div class="story-summary">${s.summary || ""}</div>
+      `;
+      mount.appendChild(card);
+    });
 }
 
 // ---------- Character detail page ----------
@@ -91,11 +186,14 @@ async function renderCharacter() {
 
   document.title = `${c.name} — ${data.universe.name}`;
 
+  const hero = primaryVariant(c);
   const tags = (c.affiliations || []).map((a) => `<span class="tag">${a}</span>`).join("");
 
   root.innerHTML = `
     <div class="char-header">
-      <img class="portrait" src="${c.portrait}" alt="${c.name}" />
+      <div class="portrait-frame">
+        ${photoMarkup(hero ? hero.image : "", c.name)}
+      </div>
       <div class="meta">
         <h1>${c.name}</h1>
         <div class="codename">${c.codename || ""}</div>
@@ -115,12 +213,22 @@ async function renderCharacter() {
   `;
 
   const variantGrid = document.getElementById("variant-grid");
-  (c.variants || []).forEach((v) => {
-    const card = el("div", "variant-card");
+  // Hero forms first (primary), alter-ego / civilian forms after and visually secondary.
+  const variants = (c.variants || []).slice().sort((a, b) => {
+    const ah = a.isHeroForm ? 0 : 1;
+    const bh = b.isHeroForm ? 0 : 1;
+    return ah - bh;
+  });
+  variants.forEach((v) => {
+    const isAlterEgo = v.isHeroForm === false;
+    const card = el("div", `variant-card${isAlterEgo ? " alter-ego" : ""}`);
     card.innerHTML = `
-      <img src="${v.image}" alt="${v.label}" loading="lazy" />
+      <div class="variant-photo">
+        ${photoMarkup(v.image, v.label)}
+      </div>
       <div class="variant-body">
         <div class="label">${v.label}</div>
+        <div class="role-tag">${isAlterEgo ? "Civilian / Alter Ego" : "Hero Form"}</div>
         <div class="year">${v.yearIntroduced || ""}</div>
         <div class="desc${v.description && v.description.startsWith("PLACEHOLDER") ? " placeholder" : ""}">${v.description || ""}</div>
       </div>
@@ -130,16 +238,5 @@ async function renderCharacter() {
 
   const timelineEl = document.getElementById("char-timeline");
   const events = (c.timelineEvents || []).slice().sort((a, b) => String(a.date).localeCompare(String(b.date)));
-  if (events.length === 0) {
-    timelineEl.appendChild(el("div", "empty-state", "No timeline events yet."));
-  }
-  events.forEach((e) => {
-    const item = el("div", "timeline-item");
-    item.innerHTML = `
-      <div class="date">${e.date}</div>
-      <div class="title">${e.title}</div>
-      <div class="summary${e.summary && e.summary.startsWith("PLACEHOLDER") ? " placeholder" : ""}">${e.summary || ""}</div>
-    `;
-    timelineEl.appendChild(item);
-  });
+  buildTimelineTrack(timelineEl, events);
 }
