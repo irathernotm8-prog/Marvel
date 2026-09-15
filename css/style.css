@@ -1,0 +1,262 @@
+:root {
+  --bg: #0b0d12;
+  --bg-panel: #14171f;
+  --border: #262b38;
+  --text: #e8e9ee;
+  --text-dim: #9aa0b0;
+  --accent: #d62828;
+  --accent-2: #3d5a80;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header.site-header {
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+header.site-header h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+}
+
+header.site-header h1 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+header.site-header .tagline {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+.section-title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+  margin: 40px 0 16px;
+}
+
+/* Character grid */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.character-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  display: block;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.character-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.character-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #1c202b;
+  display: block;
+}
+
+.character-card .card-body {
+  padding: 12px 14px 16px;
+}
+
+.character-card .name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.character-card .codename {
+  font-size: 12px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin-left: 8px;
+  padding-left: 24px;
+  border-left: 2px solid var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 28px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timeline-item .date {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.timeline-item .title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 2px 0 4px;
+}
+
+.timeline-item .who {
+  font-size: 13px;
+  color: var(--accent-2);
+  margin-bottom: 4px;
+}
+
+.timeline-item .summary {
+  font-size: 14px;
+  color: var(--text-dim);
+  max-width: 640px;
+}
+
+/* Character detail page */
+.char-header {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.char-header img.portrait {
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  object-fit: cover;
+}
+
+.char-header .meta h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+}
+
+.char-header .meta .codename {
+  color: var(--accent);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.char-header .meta .tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+}
+
+.bio {
+  max-width: 700px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  font-size: 15px;
+}
+
+.variant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.variant-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.variant-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #1c202b;
+}
+
+.variant-card .variant-body {
+  padding: 10px 12px 14px;
+}
+
+.variant-card .label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.variant-card .year {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.variant-card .desc {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--accent-2);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.placeholder {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.empty-state {
+  color: var(--text-dim);
+  font-size: 14px;
+}
