@@ -2,6 +2,8 @@
 
 A curated, fixed-timeline Marvel site. Real-world present day = in-universe present day. No build step — static HTML/CSS/JS reading from one JSON file, same pattern as your other GitHub Pages sites.
 
+**Canonicity rule:** everything in `data/characters.json` — every character, every costume/variant, every timeline event — is treated as something that actually happened in this universe. Nothing here is a hypothetical to choose between. The only way something leaves is an explicit retcon; otherwise this file only ever grows.
+
 ## Structure
 
 ```
@@ -30,7 +32,8 @@ Everything is in `data/characters.json`. Each character object:
 - `variants[]` — each look/suit/era, with its own image, year, and description.
   - `isHeroForm: true` → sorted first, tagged "Hero Form"
   - `isHeroForm: false` → civilian/alternate shot, sorted after hero forms, tagged "Alternate Form" — same full-color styling as hero forms, not dimmed
-- `timelineEvents[]` — dated entries that show up both on the character's own timeline and the site-wide timeline. `date` can be a year ("2024") or a more specific string ("2024-03") — sorting is lexicographic so keep the format consistent.
+- `timelineEvents[]` — dated entries that show up both on the character's own timeline and the site-wide timeline. `date` can be a year ("2024") or a more specific string ("2024-03") — sorting is lexicographic so keep the format consistent. Both timeline pages group events by year, so if three characters all have something dated "2016," they show up stacked inside one point on the timeline instead of three separate points.
+- A character with `"variants": []` (no art yet) is completely fine — the roster card, bio header, and variant grid all fall back to a "No Art Yet" placeholder automatically. Add art later by dropping images into `assets/characters/<id>/` and adding variant entries; nothing else needs to change.
 
 Any field still reading `PLACEHOLDER...` renders dimmed/italic so you can spot what's unwritten as you browse.
 
@@ -63,13 +66,20 @@ Drop new images into `assets/characters/<id>/` and reference them by relative pa
 
 Everything else (X-Men, solo heroes, villains) got reasonable placeholder years with no specific constraint from you yet — adjust `firstAppearanceYear` and `timelineEvents[].date` per character as you lock in backstory.
 
+## Spider-Man's corner (first fully curated storyline)
+
+Peter Parker's `bioLong` and `timelineEvents` now carry the actual story: bitten at 16 in 2016, tonally closer to the '90s animated series. A meteor crash in 2020 gives him the black suit; in 2021 he rejects it and it finds Eddie Brock, who bonds with it willingly and becomes Venom (2021). Cletus Kasady picks up a spawn of that same symbiote in 2023 and becomes Carnage. Separately, Norman Osborn (already the Green Goblin) clones Peter in 2019, producing Ben Reilly and Kaine — no Jackal, no life-takeover plot; Ben becomes a brotherly stand-in, Kaine's arc is rougher and unresolved. The rest of the classic rogues gallery (Doc Ock, Vulture, Mysterio, Sandman, Kraven, Rhino, Electro, the Lizard, Chameleon) and core supporting cast (MJ, Gwen Stacy, Aunt May, Harry Osborn, J. Jonah Jameson) are all in the roster as stubs — added because they're part of this story, most without art yet. Their `bioLong` fields are still `PLACEHOLDER`.
+
 ## Open continuity questions (flagged in the data, worth resolving early)
 
-- **Steve Rogers' origin year.** His WWII / Howling Commandos variants are dated 1945, but the premise is real-time = story-time — if he's still a WWII vet he'd be over 100 today. Decide whether that stays as deep backstory or gets reframed/cut.
-- **Bruce Banner has five Hulk personas in the art** (classic, Doc Green, Planet Hulk, Immortal Hulk, Joe Fixit). All are in the data as hero-form variants for now — decide which eras are actually canon on your fixed timeline vs. which you're leaving as unused alternates.
+- **Steve Rogers' origin year.** His WWII / Howling Commandos variants are dated 1945, but the premise is real-time = story-time — if he's still a WWII vet he'd be over 100 today. Decide whether that stays as deep backstory or gets reframed.
 - **Ant-Man and Wasp have no confirmed civilian identity yet.** Comics have used more than one person under each name (Hank Pym/Scott Lang; Janet/Hope van Dyne) — the data currently just says "Ant-Man" / "Wasp" with a placeholder bio flagging the decision.
-- **Villains/anti-heroes** (Ultron, Doctor Doom, Carnage — status "Hostile"; Loki, Venom — status "Anti-Hero") sit in the same roster grid as the heroes for now. If the roster keeps growing on that side, you may want a separate section or filter — not built yet, easy to add.
+- **Villains/anti-heroes** sit in the same roster grid as the heroes for now — the grid is growing fast on that side (Spider-Man's rogues gallery alone is a dozen entries). You may eventually want a separate section or filter — not built yet, easy to add.
 - **Ghost Rider and Blade** assume the supernatural/street-level corner of Marvel is in play at all — flag if you want to cut that from this continuity.
+- **Gwen Stacy's arc** is unwritten — the classic comics version is tragic; flag whether that beat happens here.
+- **Harry Osborn** — unwritten whether he ever takes up a Goblin identity of his own, given his father already holds it.
+
+To remove anything that gets **ret-conned out** later, just ask — deletion is explicit, never automatic.
 
 ## Running locally
 

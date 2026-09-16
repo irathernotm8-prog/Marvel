@@ -1,9 +1,9 @@
 {
   "universe": {
     "name": "Marvel Universe: Concise Continuity",
-    "description": "A curated, fixed-timeline Marvel continuity where real-world present day is in-universe present day. Only cherry-picked events and stories are canon here — edit universe.timelineAnchor, each character's events, and stories[] as you decide what counts.",
+    "description": "A curated, fixed-timeline Marvel continuity where real-world present day is in-universe present day. Cherry-picked, but additive: everything currently in this file — every character, every costume/variant, every timeline event — is canon, something that actually happened in this universe. Nothing here is a hypothetical alternate to pick between. The only way something leaves is an explicit retcon (removed on request), not by default. Edit universe.timelineAnchor, each character's events, and stories[] to keep building it out.",
     "timelineAnchor": {
-      "note": "Real time = story time. Update currentYear each year, or compute it in js/app.js from Date(). Chronology logic: Iron Man / the founding Avengers are well-established (debut ~15 years before currentYear). Peter Parker and Johnny Storm are both ~26 in the current year and got their powers as teenagers, so their eras land later, close together.",
+      "note": "Real time = story time. Update currentYear each year, or compute it in js/app.js from Date(). Chronology logic: Iron Man / the founding Avengers are well-established (debut ~15 years before currentYear). Peter Parker and Johnny Storm are both ~26 in the current year and got their powers as teenagers, so their eras land later, close together. The timeline pages group events by year — multiple things that happened the same year stack inside one point instead of spreading across several.",
       "currentYear": 2026
     }
   },
@@ -215,8 +215,8 @@
       "status": "Active",
       "affiliations": ["Avengers"],
       "primaryVariantId": "classic",
-      "bioShort": "A gamma-radiation accident left Bruce Banner unable to control a second, monstrous identity — active and well-established since before the Avengers formed. Which era/persona of the Hulk stays canon is yours to decide.",
-      "bioLong": "PLACEHOLDER — curated origin/history. You've got five distinct Hulk personas in the art (classic, Doc Green, Planet Hulk, Immortal Hulk, Joe Fixit/grey Hulk) — decide which are canon eras on this timeline vs. alternate takes you're leaving out.",
+      "bioShort": "A gamma-radiation accident left Bruce Banner unable to control a second, monstrous identity — active and well-established since before the Avengers formed. He's moved through several distinct Hulk personas over the years, all part of his history here.",
+      "bioLong": "PLACEHOLDER — curated origin/history. Five eras are on record: classic (rage-driven baseline), Joe Fixit (the cunning grey persona), Doc Green (Banner's intellect in control), Planet Hulk (exile/gladiator arc), and Immortal Hulk (a later, darker chapter) — fill in what actually happens in each.",
       "firstAppearanceYear": 2009,
       "variants": [
         {
@@ -330,8 +330,8 @@
       "status": "Active",
       "affiliations": ["Avengers"],
       "primaryVariantId": "classic",
-      "bioShort": "Bitten by a radioactive/genetically-modified spider as a teenager — a newer hero than the founding Avengers. Anchored at 26 years old in the current year, meaning his debut lands about a decade in.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "bioShort": "Bitten by a radioactive/genetically-modified spider as a teenager — a newer hero than the founding Avengers, anchored at 26 years old in the current year. Tonally, his corner of the universe plays like the '90s animated series: a rotating rogues gallery, a supporting cast that matters, and consequences that stick.",
+      "bioLong": "Gains his powers at 16 and starts out small-scale and local before the Avengers-level stuff finds him. A meteor crash later brings an alien symbiote into his life — he wears it as a black suit for a while, stronger and more aggressive, until its influence over him gets to be too much and he tears it off. He doesn't destroy it. It finds Eddie Brock instead, and that becomes someone else's story (see Venom). Separately, Norman Osborn — already established as the Green Goblin, already fixated on Peter — runs a cloning experiment on him, producing two clones: Ben and Kaine. Unlike the classic Clone Saga, this doesn't spiral into a years-long identity crisis — no Jackal pulling strings behind it, no protracted 'which one is the real Peter' arc. Ben mostly just... helps. Steps in for Peter when he's overwhelmed or needs to be two places at once, and the two of them end up with something like a brotherly bond instead of a rivalry. Kaine's arc is rougher and less resolved. The rogues gallery — Green Goblin, Doc Ock, Vulture, and the rest — is fully active across this whole span.",
       "firstAppearanceYear": 2016,
       "variants": [
         {
@@ -340,15 +340,15 @@
           "image": "assets/characters/peter-parker/classic.jpg",
           "yearIntroduced": 2016,
           "isHeroForm": true,
-          "description": "PLACEHOLDER — the first suit."
+          "description": "The first suit — homemade, red and blue, worn from his debut onward (including after he sheds the black suit)."
         },
         {
           "id": "black-suit",
           "label": "Black Suit",
           "image": "assets/characters/peter-parker/black-suit.jpg",
-          "yearIntroduced": 2023,
+          "yearIntroduced": 2020,
           "isHeroForm": true,
-          "description": "PLACEHOLDER — symbiote suit or upgraded stealth suit? Decide the in-continuity reason."
+          "description": "Alien symbiote suit, acquired from a meteor crash. Stronger, darker, more aggressive — worn for about a year before Peter rejects it."
         },
         {
           "id": "civilian",
@@ -360,7 +360,10 @@
         }
       ],
       "timelineEvents": [
-        { "date": "2016", "title": "Gains powers, becomes Spider-Man", "summary": "PLACEHOLDER — age 16, per the 26-years-old-in-2026 anchor.", "variantId": "classic" }
+        { "date": "2016", "title": "Gains powers, becomes Spider-Man", "summary": "Bitten at 16, per the 26-years-old-in-2026 anchor. Rogues gallery builds from here.", "variantId": "classic" },
+        { "date": "2019", "title": "Osborn's clones: Ben and Kaine", "summary": "Norman Osborn clones Peter, producing Ben and Kaine. No Jackal, no life-takeover plot — Ben becomes a brotherly stand-in who helps out when Peter needs him; Kaine's path is rougher.", "variantId": "classic" },
+        { "date": "2020", "title": "Meteor crash — bonds with the black suit", "summary": "An alien symbiote from the crash bonds with Peter, replacing his suit with something stronger and darker.", "variantId": "black-suit" },
+        { "date": "2021", "title": "Rejects the black suit", "summary": "The symbiote's influence goes too far; Peter tears it off and leaves it behind. It finds Eddie Brock next.", "variantId": "classic" }
       ]
     },
     {
@@ -778,21 +781,21 @@
       "status": "Anti-Hero",
       "affiliations": [],
       "primaryVariantId": "classic",
-      "bioShort": "Bonded to an alien symbiote, tangled up with Spider-Man's history. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2019,
+      "bioShort": "A journalist rival of Peter Parker's who bonds with the alien symbiote after Spider-Man rejects it. Shares Spider-Man's powers, and his hatred of Peter runs deep.",
+      "bioLong": "PLACEHOLDER — Eddie Brock's own downfall (the specific grudge against Peter — a ruined story, a public humiliation, whatever you want on record) is still unwritten. What's set: the symbiote Peter discarded in 2021 found Eddie, who — unlike Peter — bonded with it willingly and let it take hold. The result is Venom: spider-powers, no restraint, and a fixation on destroying the man who rejected the very thing that made him.",
+      "firstAppearanceYear": 2021,
       "variants": [
         {
           "id": "classic",
           "label": "Venom — Classic",
           "image": "assets/characters/venom/classic.jpg",
-          "yearIntroduced": 2019,
+          "yearIntroduced": 2021,
           "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "description": "The symbiote, formerly Spider-Man's black suit, fully bonded to Eddie Brock."
         }
       ],
       "timelineEvents": [
-        { "date": "2019", "title": "Bonds with the symbiote", "summary": "PLACEHOLDER.", "variantId": "classic" }
+        { "date": "2021", "title": "Bonds with the rejected symbiote, becomes Venom", "summary": "Picks up the suit Spider-Man tore off and discarded — this time, a willing bond.", "variantId": "classic" }
       ]
     },
     {
@@ -803,22 +806,268 @@
       "status": "Hostile",
       "affiliations": [],
       "primaryVariantId": "classic",
-      "bioShort": "Symbiote offshoot of Venom, considerably more violent. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2021,
+      "bioShort": "A spawn of Eddie Brock's symbiote, bonded to a violent serial killer. Considerably less restrained than Venom.",
+      "bioLong": "PLACEHOLDER — the specifics of Kasady and Brock's overlap (prison? hospital?) are unwritten. What's set: the Venom symbiote produces an offshoot that bonds directly to Cletus Kasady's bloodstream, making the two inseparable in a way even Eddie and his symbiote aren't. Meaner, redder, and far less interested in restraint.",
+      "firstAppearanceYear": 2023,
       "variants": [
         {
           "id": "classic",
           "label": "Carnage — Classic",
           "image": "assets/characters/carnage/classic.jpg",
-          "yearIntroduced": 2021,
+          "yearIntroduced": 2023,
           "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "description": "Cletus Kasady, bonded to a spawn of the Venom symbiote."
         }
       ],
       "timelineEvents": [
-        { "date": "2021", "title": "Bonds with the Carnage symbiote", "summary": "PLACEHOLDER.", "variantId": "classic" }
+        { "date": "2023", "title": "Bonds with the Carnage symbiote", "summary": "A spawn of Eddie Brock's symbiote bonds to Cletus Kasady.", "variantId": "classic" }
       ]
+    },
+    {
+      "id": "ben-reilly",
+      "name": "Ben Reilly",
+      "aliases": ["Scarlet Spider"],
+      "codename": "Scarlet Spider",
+      "status": "Active",
+      "affiliations": [],
+      "bioShort": "One of two clones of Peter Parker created by Norman Osborn. Unlike the classic Clone Saga, no identity crisis — Ben mostly fills in for Peter when needed, and the two have a genuinely brotherly relationship.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2019,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2019", "title": "Created as one of Osborn's Peter Parker clones", "summary": "Grows into his own identity as the Scarlet Spider, stepping in for Peter rather than replacing him.", "variantId": null }
+      ]
+    },
+    {
+      "id": "kaine",
+      "name": "Kaine",
+      "aliases": [],
+      "codename": "Kaine",
+      "status": "Anti-Hero",
+      "affiliations": [],
+      "bioShort": "The other of Norman Osborn's two Peter Parker clones. A rougher, less resolved arc than Ben's.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2019,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2019", "title": "Created as one of Osborn's Peter Parker clones", "summary": "PLACEHOLDER — where his path diverges from Ben's.", "variantId": null }
+      ]
+    },
+    {
+      "id": "norman-osborn",
+      "name": "Norman Osborn",
+      "aliases": ["Green Goblin"],
+      "codename": "Green Goblin",
+      "status": "Hostile",
+      "affiliations": ["Oscorp"],
+      "bioShort": "Industrialist and Spider-Man's archenemy. Also responsible for cloning Peter Parker, producing Ben Reilly and Kaine.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2017,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2017", "title": "Debuts as the Green Goblin", "summary": "PLACEHOLDER.", "variantId": null },
+        { "date": "2019", "title": "Clones Peter Parker", "summary": "Creates Ben and Kaine in a scheme targeting Spider-Man.", "variantId": null }
+      ]
+    },
+    {
+      "id": "doctor-octopus",
+      "name": "Otto Octavius",
+      "aliases": ["Doctor Octopus", "Doc Ock"],
+      "codename": "Doctor Octopus",
+      "status": "Hostile",
+      "affiliations": [],
+      "bioShort": "Brilliant, unstable physicist fused with four mechanical arms after a lab accident. Part of Spider-Man's rogues gallery.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2018,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2018", "title": "Lab accident — becomes Doctor Octopus", "summary": "PLACEHOLDER.", "variantId": null }
+      ]
+    },
+    {
+      "id": "vulture",
+      "name": "Adrian Toomes",
+      "aliases": ["Vulture"],
+      "codename": "Vulture",
+      "status": "Hostile",
+      "affiliations": [],
+      "bioShort": "Aging engineer with a flight harness and a grudge. Part of Spider-Man's rogues gallery.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2017,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2017", "title": "Debuts as the Vulture", "summary": "PLACEHOLDER.", "variantId": null }
+      ]
+    },
+    {
+      "id": "mysterio",
+      "name": "Quentin Beck",
+      "aliases": ["Mysterio"],
+      "codename": "Mysterio",
+      "status": "Hostile",
+      "affiliations": [],
+      "bioShort": "Special-effects expert turned illusionist supervillain. Part of Spider-Man's rogues gallery.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2019,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2019", "title": "Debuts as Mysterio", "summary": "PLACEHOLDER.", "variantId": null }
+      ]
+    },
+    {
+      "id": "sandman",
+      "name": "Flint Marko",
+      "aliases": ["Sandman"],
+      "codename": "Sandman",
+      "status": "Hostile",
+      "affiliations": [],
+      "bioShort": "Career criminal turned into living sand by a freak accident. Part of Spider-Man's rogues gallery.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2018,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2018", "title": "Freak accident — becomes Sandman", "summary": "PLACEHOLDER.", "variantId": null }
+      ]
+    },
+    {
+      "id": "kraven-the-hunter",
+      "name": "Sergei Kravinoff",
+      "aliases": ["Kraven the Hunter"],
+      "codename": "Kraven the Hunter",
+      "status": "Hostile",
+      "affiliations": [],
+      "bioShort": "Big-game hunter obsessed with proving himself against Spider-Man. Part of Spider-Man's rogues gallery.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2020,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2020", "title": "Debuts as Kraven the Hunter", "summary": "PLACEHOLDER.", "variantId": null }
+      ]
+    },
+    {
+      "id": "rhino",
+      "name": "Aleksei Sytsevich",
+      "aliases": ["Rhino"],
+      "codename": "Rhino",
+      "status": "Hostile",
+      "affiliations": [],
+      "bioShort": "Powered armor grafted to his body, brute force over strategy. Part of Spider-Man's rogues gallery.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2018,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2018", "title": "Debuts as Rhino", "summary": "PLACEHOLDER.", "variantId": null }
+      ]
+    },
+    {
+      "id": "electro",
+      "name": "Max Dillon",
+      "aliases": ["Electro"],
+      "codename": "Electro",
+      "status": "Hostile",
+      "affiliations": [],
+      "bioShort": "Electrical accident left him able to generate and control electricity. Part of Spider-Man's rogues gallery.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2019,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2019", "title": "Debuts as Electro", "summary": "PLACEHOLDER.", "variantId": null }
+      ]
+    },
+    {
+      "id": "lizard",
+      "name": "Curt Connors",
+      "aliases": ["The Lizard"],
+      "codename": "The Lizard",
+      "status": "Hostile",
+      "affiliations": [],
+      "bioShort": "Scientist whose reptilian regeneration formula cost him control of himself. Part of Spider-Man's rogues gallery — and one of his more tragic ones.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2017,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2017", "title": "Formula experiment goes wrong — becomes the Lizard", "summary": "PLACEHOLDER.", "variantId": null }
+      ]
+    },
+    {
+      "id": "chameleon",
+      "name": "Dmitri Smerdyakov",
+      "aliases": ["Chameleon"],
+      "codename": "Chameleon",
+      "status": "Hostile",
+      "affiliations": [],
+      "bioShort": "Master of disguise and identity theft. Part of Spider-Man's rogues gallery.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2017,
+      "variants": [],
+      "timelineEvents": [
+        { "date": "2017", "title": "Debuts as the Chameleon", "summary": "PLACEHOLDER.", "variantId": null }
+      ]
+    },
+    {
+      "id": "mary-jane-watson",
+      "name": "Mary Jane Watson",
+      "aliases": ["MJ"],
+      "codename": "Mary Jane Watson",
+      "status": "Supporting Cast",
+      "affiliations": [],
+      "bioShort": "Peter Parker's on-and-off love interest and closest confidant. No powers — just close enough to know.",
+      "bioLong": "PLACEHOLDER — curated backstory/relationship history.",
+      "firstAppearanceYear": 2016,
+      "variants": [],
+      "timelineEvents": []
+    },
+    {
+      "id": "gwen-stacy",
+      "name": "Gwen Stacy",
+      "aliases": [],
+      "codename": "Gwen Stacy",
+      "status": "Supporting Cast",
+      "affiliations": [],
+      "bioShort": "Classmate and early love interest of Peter Parker's. PLACEHOLDER — decide her arc and whether it follows the classic, tragic beats.",
+      "bioLong": "PLACEHOLDER — curated backstory.",
+      "firstAppearanceYear": 2016,
+      "variants": [],
+      "timelineEvents": []
+    },
+    {
+      "id": "aunt-may",
+      "name": "May Parker",
+      "aliases": ["Aunt May"],
+      "codename": "Aunt May",
+      "status": "Supporting Cast",
+      "affiliations": [],
+      "bioShort": "Peter Parker's aunt and guardian. PLACEHOLDER — decide how much she knows.",
+      "bioLong": "PLACEHOLDER — curated backstory.",
+      "firstAppearanceYear": 2016,
+      "variants": [],
+      "timelineEvents": []
+    },
+    {
+      "id": "harry-osborn",
+      "name": "Harry Osborn",
+      "aliases": [],
+      "codename": "Harry Osborn",
+      "status": "Supporting Cast",
+      "affiliations": ["Oscorp"],
+      "bioShort": "Peter Parker's best friend and Norman Osborn's son — caught in the middle of his father's double life. PLACEHOLDER — decide whether he ever takes up a Goblin identity of his own here.",
+      "bioLong": "PLACEHOLDER — curated backstory.",
+      "firstAppearanceYear": 2016,
+      "variants": [],
+      "timelineEvents": []
+    },
+    {
+      "id": "j-jonah-jameson",
+      "name": "J. Jonah Jameson",
+      "aliases": ["JJJ"],
+      "codename": "J. Jonah Jameson",
+      "status": "Supporting Cast",
+      "affiliations": ["Daily Bugle"],
+      "bioShort": "Daily Bugle publisher, perpetually convinced Spider-Man is a menace. Peter's sometime employer as a freelance photographer.",
+      "bioLong": "PLACEHOLDER — curated backstory.",
+      "firstAppearanceYear": 2016,
+      "variants": [],
+      "timelineEvents": []
     },
     {
       "id": "ultron",

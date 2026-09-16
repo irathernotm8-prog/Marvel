@@ -29,10 +29,14 @@ function primaryVariant(c) {
   return hero || variants[0] || null;
 }
 
-// A portrait figure with the frame overlay stacked on top.
+// A portrait figure with the frame overlay stacked on top. Falls back to a
+// placeholder well when no art exists yet for this character/variant.
 function photoMarkup(imgSrc, alt) {
+  const photo = imgSrc
+    ? `<img class="portrait-img" src="${imgSrc}" alt="${alt}" loading="lazy" />`
+    : `<div class="no-art"><span>No Art Yet</span></div>`;
   return `
-    <img class="portrait-img" src="${imgSrc}" alt="${alt}" loading="lazy" />
+    ${photo}
     <img class="overlay-frame" src="${OVERLAY_SRC}" alt="" aria-hidden="true" />
   `;
 }
@@ -99,6 +103,28 @@ async function renderCharacterGridPage() {
 
 // ---------- Horizontal timeline (used by timeline.html and character.html) ----------
 
+// Groups events into one stop per year (or per raw date string, if it isn't
+// year-like) so the timeline only ever shows one point per year, with every
+// event that happened that year stacked inside its card.
+function groupEventsByYear(events) {
+  const yearOf = (d) => {
+    const m = String(d).match(/^-?\d{3,4}/);
+    return m ? m[0] : String(d);
+  };
+  const groups = [];
+  const byYear = new Map();
+  events.forEach((e) => {
+    const y = yearOf(e.date);
+    if (!byYear.has(y)) {
+      const group = { year: y, events: [] };
+      byYear.set(y, group);
+      groups.push(group);
+    }
+    byYear.get(y).events.push(e);
+  });
+  return groups;
+}
+
 function buildTimelineTrack(mountEl, events) {
   mountEl.innerHTML = "";
   if (events.length === 0) {
@@ -107,18 +133,28 @@ function buildTimelineTrack(mountEl, events) {
   }
   const scroll = el("div", "timeline-scroll");
   const track = el("div", "timeline-track");
-  events.forEach((e) => {
+  const groups = groupEventsByYear(events);
+  groups.forEach((group) => {
     const stop = el("div", "timeline-stop");
-    const whoLink = e.characterId
-      ? `<a class="who" href="character.html?id=${encodeURIComponent(e.characterId)}">${e.characterName || ""}</a>`
-      : "";
+    const entriesHtml = group.events
+      .map((e) => {
+        const whoLink = e.characterId
+          ? `<a class="who" href="character.html?id=${encodeURIComponent(e.characterId)}">${e.characterName || ""}</a>`
+          : "";
+        return `
+          <div class="stop-entry">
+            ${whoLink}
+            <div class="title">${e.title}</div>
+            <div class="summary${e.summary && e.summary.startsWith("PLACEHOLDER") ? " placeholder" : ""}">${e.summary || ""}</div>
+          </div>
+        `;
+      })
+      .join('<hr class="stop-divider" />');
     stop.innerHTML = `
-      <div class="date">${e.date}</div>
+      <div class="date">${group.year}</div>
       <div class="dot"></div>
       <div class="card">
-        ${whoLink}
-        <div class="title">${e.title}</div>
-        <div class="summary${e.summary && e.summary.startsWith("PLACEHOLDER") ? " placeholder" : ""}">${e.summary || ""}</div>
+        ${entriesHtml}
       </div>
     `;
     track.appendChild(stop);
@@ -228,6 +264,9 @@ async function renderCharacter() {
     const bh = b.isHeroForm ? 0 : 1;
     return ah - bh;
   });
+  if (variants.length === 0) {
+    variantGrid.appendChild(el("div", "empty-state", "No art yet — drop images into assets/characters/" + c.id + "/ and add them to this character's variants[] in data/characters.json."));
+  }
   variants.forEach((v) => {
     const isAlterEgo = v.isHeroForm === false;
     const card = el("div", "variant-card");
