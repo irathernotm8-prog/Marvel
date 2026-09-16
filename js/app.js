@@ -2,7 +2,7 @@
 // All content lives in data/characters.json — edit that file to add
 // characters, variants, timeline events, and stories. No build step needed.
 
-const OVERLAY_SRC = "assets/overlay/frame.png";
+const OVERLAY_SRC = "assets/overlay/shield-badge.png";
 
 async function loadData() {
   const res = await fetch("data/characters.json");
@@ -34,6 +34,17 @@ function photoMarkup(imgSrc, alt) {
   return `
     <img class="portrait-img" src="${imgSrc}" alt="${alt}" loading="lazy" />
     <img class="overlay-frame" src="${OVERLAY_SRC}" alt="" aria-hidden="true" />
+  `;
+}
+
+// Hero identity is primary (large, red, on top); civilian/real name is
+// secondary underneath. Skipped when the two are the same (e.g. Ultron).
+function nameBlockMarkup(c, heroClass, realClass) {
+  const hero = c.codename || c.name;
+  const showReal = c.name && c.name !== c.codename;
+  return `
+    <div class="${heroClass}">${hero}</div>
+    ${showReal ? `<div class="${realClass}">${c.name}</div>` : ""}
   `;
 }
 
@@ -78,8 +89,7 @@ async function renderCharacterGridPage() {
         ${photoMarkup(hero ? hero.image : "", c.name)}
       </div>
       <div class="card-body">
-        <div class="name">${c.name}</div>
-        <div class="codename">${c.codename || ""}</div>
+        ${nameBlockMarkup(c, "hero-name", "real-name")}
         <div class="status-tag">${c.status || "Unknown"}</div>
       </div>
     `;
@@ -195,8 +205,7 @@ async function renderCharacter() {
         ${photoMarkup(hero ? hero.image : "", c.name)}
       </div>
       <div class="meta">
-        <h1>${c.name}</h1>
-        <div class="codename">${c.codename || ""}</div>
+        ${nameBlockMarkup(c, "hero-name", "real-name")}
         <div class="tags">${tags}<span class="tag">${c.status || "Unknown status"}</span></div>
         <p class="bio">${c.bioShort || ""}</p>
       </div>
@@ -221,14 +230,14 @@ async function renderCharacter() {
   });
   variants.forEach((v) => {
     const isAlterEgo = v.isHeroForm === false;
-    const card = el("div", `variant-card${isAlterEgo ? " alter-ego" : ""}`);
+    const card = el("div", "variant-card");
     card.innerHTML = `
       <div class="variant-photo">
         ${photoMarkup(v.image, v.label)}
       </div>
       <div class="variant-body">
         <div class="label">${v.label}</div>
-        <div class="role-tag">${isAlterEgo ? "Civilian / Alter Ego" : "Hero Form"}</div>
+        <div class="role-tag">${isAlterEgo ? "Alternate Form" : "Hero Form"}</div>
         <div class="year">${v.yearIntroduced || ""}</div>
         <div class="desc${v.description && v.description.startsWith("PLACEHOLDER") ? " placeholder" : ""}">${v.description || ""}</div>
       </div>

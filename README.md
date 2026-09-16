@@ -13,7 +13,7 @@ css/style.css            All styling — Marvel red / black / white
 js/app.js                Reads data/characters.json and renders every page + the shared nav
 data/characters.json     ALL content lives here — characters, bios, eras/variants, timeline events, stories
 assets/characters/<id>/  Character art, one subfolder per character
-assets/overlay/frame.png The portrait frame/badge overlay, stacked on every portrait
+assets/overlay/shield-badge.png  Small S.H.I.E.L.D. badge watermark, stacked on every portrait
 ```
 
 Nav is shared: every page has `<header class="site-nav" id="site-nav"></header>`, and `renderNav("characters"|"timeline"|"stories")` fills it in and highlights the active tab.
@@ -26,9 +26,10 @@ Everything is in `data/characters.json`. Each character object:
 - `primaryVariantId` — which variant is the default/hero portrait shown on the roster grid and bio header. Falls back to the first variant flagged `isHeroForm: true`.
 - `bioShort` — one or two sentences, shown at the top of the bio page
 - `bioLong` — the curated history paragraph(s). This is where you decide what counts as canon.
+- `codename` — the hero identity (e.g. "Iron Man"). Shown large and red, on top, everywhere — roster cards and the bio header. `name` (the civilian/real name, e.g. "Tony Stark") shows smaller underneath. If the two are identical (Ultron, Loki, etc.) only one line is shown.
 - `variants[]` — each look/suit/era, with its own image, year, and description.
-  - `isHeroForm: true` → shown first, full styling ("Hero Form" tag, red accent border)
-  - `isHeroForm: false` → civilian/alter-ego shot, shown after hero forms, dimmed with a "Civilian / Alter Ego" tag
+  - `isHeroForm: true` → sorted first, tagged "Hero Form"
+  - `isHeroForm: false` → civilian/alternate shot, sorted after hero forms, tagged "Alternate Form" — same full-color styling as hero forms, not dimmed
 - `timelineEvents[]` — dated entries that show up both on the character's own timeline and the site-wide timeline. `date` can be a year ("2024") or a more specific string ("2024-03") — sorting is lexicographic so keep the format consistent.
 
 Any field still reading `PLACEHOLDER...` renders dimmed/italic so you can spot what's unwritten as you browse.
@@ -51,15 +52,24 @@ They'll render on the Stories tab automatically, newest last (sorted by `date`).
 
 ## Adding art
 
-Drop new images into `assets/characters/<id>/` and reference them by relative path from the site root in the JSON. Portraits are shown uncropped (`object-fit: contain`) at a 2:3 frame to match `assets/overlay/frame.png` — keep new art close to that 2:3 ratio (current art is 848×1264) so the overlay frame lines up cleanly. The overlay is applied automatically to every portrait everywhere (roster cards, bio header, variant cards) via `js/app.js`'s `photoMarkup()` — swap `assets/overlay/frame.png` for a new design anytime without touching code.
+Drop new images into `assets/characters/<id>/` and reference them by relative path from the site root in the JSON. Portraits are shown uncropped (`object-fit: contain`) at a 2:3 frame — keep new art close to that 2:3 ratio (current art is 848×1264) so the framing stays consistent. Every photo well (roster cards, bio header, variant cards) automatically gets a bottom vignette, a thin red top accent, and the `assets/overlay/shield-badge.png` watermark in the corner, all via CSS + `js/app.js`'s `photoMarkup()` — swap that PNG for a different mark anytime without touching code, or restyle the frame itself in `style.css` under "Portrait overlay treatment."
+
+## Chronology logic
+
+`universe.timelineAnchor.currentYear` (2026) is the anchor — real time = story time. Two rules drive the years already in the data:
+
+- **The founding Avengers are well-established.** Iron Man, Captain America, Thor, Hawkeye, Black Widow, Hulk, Ant-Man, and Wasp all debut/found the team around 2009–2013, roughly 15+ years before the current year.
+- **Peter Parker and Johnny Storm are both ~26 in the current year** and got their powers as teenagers, so both debut around 2016 — a full Avengers-generation later than Iron Man. The rest of the Fantastic Four (Sue Storm, Reed Richards, Ben Grimm) share that 2016 origin event.
+
+Everything else (X-Men, solo heroes, villains) got reasonable placeholder years with no specific constraint from you yet — adjust `firstAppearanceYear` and `timelineEvents[].date` per character as you lock in backstory.
 
 ## Open continuity questions (flagged in the data, worth resolving early)
 
 - **Steve Rogers' origin year.** His WWII / Howling Commandos variants are dated 1945, but the premise is real-time = story-time — if he's still a WWII vet he'd be over 100 today. Decide whether that stays as deep backstory or gets reframed/cut.
 - **Bruce Banner has five Hulk personas in the art** (classic, Doc Green, Planet Hulk, Immortal Hulk, Joe Fixit). All are in the data as hero-form variants for now — decide which eras are actually canon on your fixed timeline vs. which you're leaving as unused alternates.
 - **Ant-Man and Wasp have no confirmed civilian identity yet.** Comics have used more than one person under each name (Hank Pym/Scott Lang; Janet/Hope van Dyne) — the data currently just says "Ant-Man" / "Wasp" with a placeholder bio flagging the decision.
-- **Ultron** is in the roster as a hostile/villain entry, not an Avenger. If the roster grows more antagonists, you may want a separate section or a `role: "villain"` filter down the line — that's not built yet, easy to add.
-- Exact years for every event are placeholders spread across a believable ~10-year "modern era" window — adjust `firstAppearanceYear` and `timelineEvents[].date` per character as you lock in backstory length.
+- **Villains/anti-heroes** (Ultron, Doctor Doom, Carnage — status "Hostile"; Loki, Venom — status "Anti-Hero") sit in the same roster grid as the heroes for now. If the roster keeps growing on that side, you may want a separate section or filter — not built yet, easy to add.
+- **Ghost Rider and Blade** assume the supernatural/street-level corner of Marvel is in play at all — flag if you want to cut that from this continuity.
 
 ## Running locally
 

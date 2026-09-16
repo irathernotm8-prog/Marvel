@@ -3,7 +3,7 @@
     "name": "Marvel Universe: Concise Continuity",
     "description": "A curated, fixed-timeline Marvel continuity where real-world present day is in-universe present day. Only cherry-picked events and stories are canon here — edit universe.timelineAnchor, each character's events, and stories[] as you decide what counts.",
     "timelineAnchor": {
-      "note": "Real time = story time. Update currentYear each year, or compute it in js/app.js from Date().",
+      "note": "Real time = story time. Update currentYear each year, or compute it in js/app.js from Date(). Chronology logic: Iron Man / the founding Avengers are well-established (debut ~15 years before currentYear). Peter Parker and Johnny Storm are both ~26 in the current year and got their powers as teenagers, so their eras land later, close together.",
       "currentYear": 2026
     }
   },
@@ -16,87 +16,46 @@
       "status": "Active",
       "affiliations": ["Avengers", "Stark Industries"],
       "primaryVariantId": "mk3",
-      "bioShort": "Genius inventor and CEO of Stark Industries. Built the first Iron Man suit to survive captivity, then kept building — armor as an answer to every crisis he sees coming.",
+      "bioShort": "Genius inventor and CEO of Stark Industries. Built the first Iron Man suit to survive captivity, then kept building — armor as an answer to every crisis he sees coming. A founding, well-established Avenger.",
       "bioLong": "PLACEHOLDER — write the curated origin/history you want canon here. Keep it tight: only the beats you're actually including in this continuity.",
-      "firstAppearanceYear": 2016,
+      "firstAppearanceYear": 2009,
       "variants": [
         {
           "id": "mk1",
           "label": "Mark I — Origin Armor",
-          "image": "assets/characters/tony-stark/mk1.png",
-          "yearIntroduced": 2016,
+          "image": "assets/characters/tony-stark/mk1.jpg",
+          "yearIntroduced": 2009,
           "isHeroForm": true,
           "description": "PLACEHOLDER — the improvised armor built to escape captivity. Where/why in your continuity?"
         },
         {
           "id": "mk3",
           "label": "Mark III — Red & Gold",
-          "image": "assets/characters/tony-stark/mk3.png",
-          "yearIntroduced": 2017,
+          "image": "assets/characters/tony-stark/mk3.jpg",
+          "yearIntroduced": 2010,
           "isHeroForm": true,
           "description": "PLACEHOLDER — the refined, public-facing suit. First outing as a known hero?"
         },
         {
           "id": "superior",
           "label": "Superior Iron Man",
-          "image": "assets/characters/tony-stark/superior.png",
-          "yearIntroduced": 2024,
+          "image": "assets/characters/tony-stark/superior.jpg",
+          "yearIntroduced": 2022,
           "isHeroForm": true,
           "description": "PLACEHOLDER — a later-era suit/persona shift. What story arc puts him here?"
         },
         {
           "id": "civilian",
           "label": "Tony Stark — Civilian",
-          "image": "assets/characters/tony-stark/civilian.png",
-          "yearIntroduced": 2016,
+          "image": "assets/characters/tony-stark/civilian.jpg",
+          "yearIntroduced": 2009,
           "isHeroForm": false,
           "description": "Out of the armor — CEO of Stark Industries."
         }
       ],
       "timelineEvents": [
-        { "date": "2016", "title": "Becomes Iron Man", "summary": "PLACEHOLDER — the curated origin event.", "variantId": "mk1" },
-        { "date": "2017", "title": "Goes public", "summary": "PLACEHOLDER.", "variantId": "mk3" }
-      ]
-    },
-    {
-      "id": "peter-parker",
-      "name": "Peter Parker",
-      "aliases": ["Spider-Man"],
-      "codename": "Spider-Man",
-      "status": "Active",
-      "affiliations": ["Avengers"],
-      "primaryVariantId": "classic",
-      "bioShort": "Bitten by a radioactive/genetically-modified spider as a teenager. Balances a normal life with a self-made responsibility to protect his city.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2022,
-      "variants": [
-        {
-          "id": "classic",
-          "label": "Classic Suit",
-          "image": "assets/characters/peter-parker/classic.png",
-          "yearIntroduced": 2022,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the first suit."
-        },
-        {
-          "id": "black-suit",
-          "label": "Black Suit",
-          "image": "assets/characters/peter-parker/black-suit.png",
-          "yearIntroduced": 2025,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — symbiote suit or upgraded stealth suit? Decide the in-continuity reason."
-        },
-        {
-          "id": "civilian",
-          "label": "Peter Parker — Civilian",
-          "image": "assets/characters/peter-parker/civilian.png",
-          "yearIntroduced": 2022,
-          "isHeroForm": false,
-          "description": "Out of the mask — student/daily life."
-        }
-      ],
-      "timelineEvents": [
-        { "date": "2022", "title": "Gains powers, becomes Spider-Man", "summary": "PLACEHOLDER.", "variantId": "classic" }
+        { "date": "2009", "title": "Becomes Iron Man", "summary": "PLACEHOLDER — the curated origin event.", "variantId": "mk1" },
+        { "date": "2011", "title": "Founds the Avengers", "summary": "PLACEHOLDER.", "variantId": "mk3" }
       ]
     },
     {
@@ -107,14 +66,14 @@
       "status": "Active",
       "affiliations": ["Avengers", "Howling Commandos (historical)"],
       "primaryVariantId": "classic",
-      "bioShort": "Recipient of the Super Soldier Serum. In this fixed timeline, decide how much WWII/Howling Commandos history stays canon versus a modern-origin rework.",
+      "bioShort": "Recipient of the Super Soldier Serum, and a founding, well-established Avenger. In this fixed timeline, decide how much WWII/Howling Commandos history stays canon versus a modern-origin rework.",
       "bioLong": "PLACEHOLDER — with real-time = story-time, you'll need to decide: is Steve still a WWII veteran (making him over 100), or is his origin moved forward? This is a key continuity call for a fixed modern timeline.",
       "firstAppearanceYear": 1945,
       "variants": [
         {
           "id": "wwii",
           "label": "Lt. Rogers — Wartime",
-          "image": "assets/characters/steve-rogers/wwii.png",
+          "image": "assets/characters/steve-rogers/wwii.jpg",
           "yearIntroduced": 1945,
           "isHeroForm": true,
           "description": "PLACEHOLDER — keep, cut, or reframe this era for your continuity."
@@ -122,7 +81,7 @@
         {
           "id": "howling-commandos",
           "label": "With the Howling Commandos",
-          "image": "assets/characters/steve-rogers/howling-commandos.png",
+          "image": "assets/characters/steve-rogers/howling-commandos.jpg",
           "yearIntroduced": 1945,
           "isHeroForm": true,
           "description": "PLACEHOLDER — his run leading the Howling Commandos unit."
@@ -130,113 +89,15 @@
         {
           "id": "classic",
           "label": "Captain America — Modern",
-          "image": "assets/characters/steve-rogers/classic.png",
-          "yearIntroduced": 2019,
+          "image": "assets/characters/steve-rogers/classic.jpg",
+          "yearIntroduced": 2011,
           "isHeroForm": true,
-          "description": "PLACEHOLDER — modern-day re-emergence or debut."
+          "description": "PLACEHOLDER — modern-day re-emergence, around the Avengers' founding."
         }
       ],
       "timelineEvents": [
         { "date": "1945", "title": "Wartime service with the Howling Commandos", "summary": "PLACEHOLDER — decide if this stays canon on a fixed modern timeline.", "variantId": "howling-commandos" },
-        { "date": "2019", "title": "Re-emerges as Captain America", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
-    },
-    {
-      "id": "bruce-banner",
-      "name": "Bruce Banner",
-      "aliases": ["Hulk"],
-      "codename": "Hulk",
-      "status": "Active",
-      "affiliations": ["Avengers"],
-      "primaryVariantId": "classic",
-      "bioShort": "A gamma-radiation accident left Bruce Banner unable to control a second, monstrous identity. Which era/persona of the Hulk stays canon is yours to decide.",
-      "bioLong": "PLACEHOLDER — curated origin/history. You've got five distinct Hulk personas in the art (classic, Doc Green, Planet Hulk, Immortal Hulk, Joe Fixit/grey Hulk) — decide which are canon eras on this timeline vs. alternate takes you're leaving out.",
-      "firstAppearanceYear": 2018,
-      "variants": [
-        {
-          "id": "classic",
-          "label": "Hulk — Classic",
-          "image": "assets/characters/bruce-banner/classic.png",
-          "yearIntroduced": 2018,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the baseline, rage-driven Hulk."
-        },
-        {
-          "id": "doc-green",
-          "label": "Doc Green",
-          "image": "assets/characters/bruce-banner/doc-green.png",
-          "yearIntroduced": 2022,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the era where Banner's intellect leads instead of the rage."
-        },
-        {
-          "id": "planet-hulk",
-          "label": "Planet Hulk",
-          "image": "assets/characters/bruce-banner/planet-hulk.png",
-          "yearIntroduced": 2023,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — exile/gladiator arc. Does this happen on your fixed timeline?"
-        },
-        {
-          "id": "immortal-hulk",
-          "label": "Immortal Hulk",
-          "image": "assets/characters/bruce-banner/immortal-hulk.png",
-          "yearIntroduced": 2025,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — a darker, horror-inflected later era."
-        },
-        {
-          "id": "joe-fixit",
-          "label": "Joe Fixit (Grey Hulk)",
-          "image": "assets/characters/bruce-banner/joe-fixit.png",
-          "yearIntroduced": 2020,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the smaller, cunning grey persona."
-        }
-      ],
-      "timelineEvents": [
-        { "date": "2018", "title": "Gamma accident — first transformation", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
-    },
-    {
-      "id": "hawkeye",
-      "name": "Clint Barton",
-      "aliases": ["Hawkeye"],
-      "codename": "Hawkeye",
-      "status": "Active",
-      "affiliations": ["Avengers", "S.H.I.E.L.D. (historical)"],
-      "primaryVariantId": "classic",
-      "bioShort": "World-class marksman with no powers beyond relentless skill and nerve. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2017,
-      "variants": [
-        {
-          "id": "first-appearance",
-          "label": "First Appearance",
-          "image": "assets/characters/hawkeye/first-appearance.png",
-          "yearIntroduced": 2017,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — his earliest costume."
-        },
-        {
-          "id": "shield-ops",
-          "label": "S.H.I.E.L.D. Ops",
-          "image": "assets/characters/hawkeye/shield-ops.png",
-          "yearIntroduced": 2019,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — tactical black-ops period."
-        },
-        {
-          "id": "classic",
-          "label": "Hawkeye — Classic",
-          "image": "assets/characters/hawkeye/classic.png",
-          "yearIntroduced": 2021,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the purple, Avengers-era look."
-        }
-      ],
-      "timelineEvents": [
-        { "date": "2017", "title": "Debuts as Hawkeye", "summary": "PLACEHOLDER.", "variantId": "first-appearance" }
+        { "date": "2011", "title": "Re-emerges, founds the Avengers", "summary": "PLACEHOLDER.", "variantId": "classic" }
       ]
     },
     {
@@ -247,95 +108,78 @@
       "status": "Active",
       "affiliations": ["Avengers", "Asgard"],
       "primaryVariantId": "classic",
-      "bioShort": "Asgardian god of thunder. PLACEHOLDER — decide how much Asgardian mythology stays canon on a grounded modern timeline.",
+      "bioShort": "Asgardian god of thunder, and a founding, well-established Avenger. PLACEHOLDER — decide how much Asgardian mythology stays canon on a grounded modern timeline.",
       "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2016,
+      "firstAppearanceYear": 2010,
       "variants": [
         {
           "id": "first-appearance",
           "label": "First Appearance",
-          "image": "assets/characters/thor/first-appearance.png",
-          "yearIntroduced": 2016,
+          "image": "assets/characters/thor/first-appearance.jpg",
+          "yearIntroduced": 2010,
           "isHeroForm": true,
           "description": "PLACEHOLDER — arrival on Earth."
         },
         {
           "id": "classic",
           "label": "Thor — Classic",
-          "image": "assets/characters/thor/classic.png",
-          "yearIntroduced": 2017,
+          "image": "assets/characters/thor/classic.jpg",
+          "yearIntroduced": 2011,
           "isHeroForm": true,
           "description": "PLACEHOLDER — the standard Avengers-era look."
         },
         {
           "id": "siege",
           "label": "Siege Armor",
-          "image": "assets/characters/thor/siege.png",
-          "yearIntroduced": 2024,
+          "image": "assets/characters/thor/siege.jpg",
+          "yearIntroduced": 2023,
           "isHeroForm": true,
           "description": "PLACEHOLDER — a war-era heavier armor. Which conflict, in your continuity?"
         }
       ],
       "timelineEvents": [
-        { "date": "2016", "title": "Arrives on Earth", "summary": "PLACEHOLDER.", "variantId": "first-appearance" }
+        { "date": "2010", "title": "Arrives on Earth", "summary": "PLACEHOLDER.", "variantId": "first-appearance" }
       ]
     },
     {
-      "id": "wasp",
-      "name": "Wasp",
-      "aliases": [],
-      "codename": "Wasp",
+      "id": "hawkeye",
+      "name": "Clint Barton",
+      "aliases": ["Hawkeye"],
+      "codename": "Hawkeye",
       "status": "Active",
-      "affiliations": ["Avengers"],
+      "affiliations": ["Avengers", "S.H.I.E.L.D. (historical)"],
       "primaryVariantId": "classic",
-      "bioShort": "PLACEHOLDER — decide whether this is Janet van Dyne or Hope van Dyne (or another) as the Wasp on this timeline; civilian identity not yet set.",
+      "bioShort": "World-class marksman with no powers beyond relentless skill and nerve. A founding, well-established Avenger. PLACEHOLDER — add the curated backstory.",
       "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2023,
-      "variants": [
-        {
-          "id": "classic",
-          "label": "Wasp — Classic",
-          "image": "assets/characters/wasp/classic.png",
-          "yearIntroduced": 2023,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
-        }
-      ],
-      "timelineEvents": [
-        { "date": "2023", "title": "Debuts as Wasp", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
-    },
-    {
-      "id": "ant-man",
-      "name": "Ant-Man",
-      "aliases": [],
-      "codename": "Ant-Man",
-      "status": "Active",
-      "affiliations": ["Avengers"],
-      "primaryVariantId": "classic",
-      "bioShort": "PLACEHOLDER — decide whether this is Hank Pym or Scott Lang (or another) as Ant-Man on this timeline; civilian identity not yet set.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2018,
+      "firstAppearanceYear": 2009,
       "variants": [
         {
           "id": "first-appearance",
           "label": "First Appearance",
-          "image": "assets/characters/ant-man/first-appearance.png",
-          "yearIntroduced": 2018,
+          "image": "assets/characters/hawkeye/first-appearance.jpg",
+          "yearIntroduced": 2009,
           "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "description": "PLACEHOLDER — his earliest costume, S.H.I.E.L.D.-era."
+        },
+        {
+          "id": "shield-ops",
+          "label": "S.H.I.E.L.D. Ops",
+          "image": "assets/characters/hawkeye/shield-ops.jpg",
+          "yearIntroduced": 2010,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — tactical black-ops period."
         },
         {
           "id": "classic",
-          "label": "Ant-Man — Classic",
-          "image": "assets/characters/ant-man/classic.png",
-          "yearIntroduced": 2020,
+          "label": "Hawkeye — Classic",
+          "image": "assets/characters/hawkeye/classic.jpg",
+          "yearIntroduced": 2011,
           "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "description": "PLACEHOLDER — the purple, Avengers-era look."
         }
       ],
       "timelineEvents": [
-        { "date": "2018", "title": "Debuts as Ant-Man", "summary": "PLACEHOLDER.", "variantId": "first-appearance" }
+        { "date": "2009", "title": "Debuts as Hawkeye", "summary": "PLACEHOLDER.", "variantId": "first-appearance" }
       ]
     },
     {
@@ -346,21 +190,634 @@
       "status": "Active",
       "affiliations": ["Avengers", "S.H.I.E.L.D. (historical)"],
       "primaryVariantId": "classic",
-      "bioShort": "Former espionage operative turned Avenger. PLACEHOLDER — add the curated backstory.",
+      "bioShort": "Former espionage operative turned Avenger, well-established alongside the team's founding. PLACEHOLDER — add the curated backstory.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2010,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Black Widow — Classic",
+          "image": "assets/characters/black-widow/classic.jpg",
+          "yearIntroduced": 2010,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2011", "title": "Joins the Avengers", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "bruce-banner",
+      "name": "Bruce Banner",
+      "aliases": ["Hulk"],
+      "codename": "Hulk",
+      "status": "Active",
+      "affiliations": ["Avengers"],
+      "primaryVariantId": "classic",
+      "bioShort": "A gamma-radiation accident left Bruce Banner unable to control a second, monstrous identity — active and well-established since before the Avengers formed. Which era/persona of the Hulk stays canon is yours to decide.",
+      "bioLong": "PLACEHOLDER — curated origin/history. You've got five distinct Hulk personas in the art (classic, Doc Green, Planet Hulk, Immortal Hulk, Joe Fixit/grey Hulk) — decide which are canon eras on this timeline vs. alternate takes you're leaving out.",
+      "firstAppearanceYear": 2009,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Hulk — Classic",
+          "image": "assets/characters/bruce-banner/classic.jpg",
+          "yearIntroduced": 2009,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — the baseline, rage-driven Hulk."
+        },
+        {
+          "id": "joe-fixit",
+          "label": "Joe Fixit (Grey Hulk)",
+          "image": "assets/characters/bruce-banner/joe-fixit.jpg",
+          "yearIntroduced": 2013,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — the smaller, cunning grey persona."
+        },
+        {
+          "id": "doc-green",
+          "label": "Doc Green",
+          "image": "assets/characters/bruce-banner/doc-green.jpg",
+          "yearIntroduced": 2017,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — the era where Banner's intellect leads instead of the rage."
+        },
+        {
+          "id": "planet-hulk",
+          "label": "Planet Hulk",
+          "image": "assets/characters/bruce-banner/planet-hulk.jpg",
+          "yearIntroduced": 2021,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — exile/gladiator arc. Does this happen on your fixed timeline?"
+        },
+        {
+          "id": "immortal-hulk",
+          "label": "Immortal Hulk",
+          "image": "assets/characters/bruce-banner/immortal-hulk.jpg",
+          "yearIntroduced": 2024,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — a darker, horror-inflected later era."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2009", "title": "Gamma accident — first transformation", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "wasp",
+      "name": "Wasp",
+      "aliases": [],
+      "codename": "Wasp",
+      "status": "Active",
+      "affiliations": ["Avengers"],
+      "primaryVariantId": "classic",
+      "bioShort": "A founding-era Avenger. PLACEHOLDER — decide whether this is Janet van Dyne or Hope van Dyne (or another) as the Wasp on this timeline; civilian identity not yet set.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2011,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Wasp — Classic",
+          "image": "assets/characters/wasp/classic.jpg",
+          "yearIntroduced": 2011,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2011", "title": "Debuts as Wasp", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "ant-man",
+      "name": "Ant-Man",
+      "aliases": [],
+      "codename": "Ant-Man",
+      "status": "Active",
+      "affiliations": ["Avengers"],
+      "primaryVariantId": "classic",
+      "bioShort": "A founding-era Avenger. PLACEHOLDER — decide whether this is Hank Pym or Scott Lang (or another) as Ant-Man on this timeline; civilian identity not yet set.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2011,
+      "variants": [
+        {
+          "id": "first-appearance",
+          "label": "First Appearance",
+          "image": "assets/characters/ant-man/first-appearance.jpg",
+          "yearIntroduced": 2011,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        },
+        {
+          "id": "classic",
+          "label": "Ant-Man — Classic",
+          "image": "assets/characters/ant-man/classic.jpg",
+          "yearIntroduced": 2013,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2011", "title": "Debuts as Ant-Man", "summary": "PLACEHOLDER.", "variantId": "first-appearance" }
+      ]
+    },
+    {
+      "id": "peter-parker",
+      "name": "Peter Parker",
+      "aliases": ["Spider-Man"],
+      "codename": "Spider-Man",
+      "status": "Active",
+      "affiliations": ["Avengers"],
+      "primaryVariantId": "classic",
+      "bioShort": "Bitten by a radioactive/genetically-modified spider as a teenager — a newer hero than the founding Avengers. Anchored at 26 years old in the current year, meaning his debut lands about a decade in.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2016,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Classic Suit",
+          "image": "assets/characters/peter-parker/classic.jpg",
+          "yearIntroduced": 2016,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — the first suit."
+        },
+        {
+          "id": "black-suit",
+          "label": "Black Suit",
+          "image": "assets/characters/peter-parker/black-suit.jpg",
+          "yearIntroduced": 2023,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — symbiote suit or upgraded stealth suit? Decide the in-continuity reason."
+        },
+        {
+          "id": "civilian",
+          "label": "Peter Parker — Civilian",
+          "image": "assets/characters/peter-parker/civilian.jpg",
+          "yearIntroduced": 2016,
+          "isHeroForm": false,
+          "description": "Out of the mask — daily life."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2016", "title": "Gains powers, becomes Spider-Man", "summary": "PLACEHOLDER — age 16, per the 26-years-old-in-2026 anchor.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "johnny-storm",
+      "name": "Johnny Storm",
+      "aliases": ["Human Torch"],
+      "codename": "Human Torch",
+      "status": "Active",
+      "affiliations": ["Fantastic Four"],
+      "primaryVariantId": "human-torch",
+      "bioShort": "The youngest member of the Fantastic Four. Anchored the same age as Peter Parker (26 in the current year), so his origin lands in the same era as Spider-Man's.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2016,
+      "variants": [
+        {
+          "id": "human-torch",
+          "label": "Human Torch — Flame On",
+          "image": "assets/characters/johnny-storm/human-torch.jpg",
+          "yearIntroduced": 2016,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — powers engaged."
+        },
+        {
+          "id": "base-form",
+          "label": "Johnny Storm — Powered Down",
+          "image": "assets/characters/johnny-storm/base-form.jpg",
+          "yearIntroduced": 2016,
+          "isHeroForm": false,
+          "description": "PLACEHOLDER — same person, flame off."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2016", "title": "Cosmic-ray accident — the Fantastic Four form", "summary": "PLACEHOLDER — age ~16, matching Peter Parker's era.", "variantId": "human-torch" }
+      ]
+    },
+    {
+      "id": "sue-storm",
+      "name": "Susan Storm",
+      "aliases": ["Invisible Woman"],
+      "codename": "Invisible Woman",
+      "status": "Active",
+      "affiliations": ["Fantastic Four"],
+      "primaryVariantId": "classic",
+      "bioShort": "Founding member of the Fantastic Four. PLACEHOLDER — add the curated backstory.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2016,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Invisible Woman — Classic",
+          "image": "assets/characters/sue-storm/classic.jpg",
+          "yearIntroduced": 2016,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2016", "title": "Cosmic-ray accident — the Fantastic Four form", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "mr-fantastic",
+      "name": "Reed Richards",
+      "aliases": ["Mr. Fantastic"],
+      "codename": "Mr. Fantastic",
+      "status": "Active",
+      "affiliations": ["Fantastic Four"],
+      "primaryVariantId": "classic",
+      "bioShort": "Leader and chief scientist of the Fantastic Four. PLACEHOLDER — add the curated backstory.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2016,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Mr. Fantastic — Classic",
+          "image": "assets/characters/mr-fantastic/classic.jpg",
+          "yearIntroduced": 2016,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2016", "title": "Cosmic-ray accident — the Fantastic Four form", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "the-thing",
+      "name": "Ben Grimm",
+      "aliases": ["The Thing"],
+      "codename": "The Thing",
+      "status": "Active",
+      "affiliations": ["Fantastic Four"],
+      "primaryVariantId": "classic",
+      "bioShort": "Founding member of the Fantastic Four. PLACEHOLDER — add the curated backstory.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2016,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "The Thing — Classic",
+          "image": "assets/characters/the-thing/classic.jpg",
+          "yearIntroduced": 2016,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2016", "title": "Cosmic-ray accident — the Fantastic Four form", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "cyclops",
+      "name": "Scott Summers",
+      "aliases": ["Cyclops"],
+      "codename": "Cyclops",
+      "status": "Active",
+      "affiliations": ["X-Men"],
+      "primaryVariantId": "classic",
+      "bioShort": "Field leader of the X-Men. PLACEHOLDER — add the curated backstory and decide how his timeline lines up with the Avengers/X-Men split.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2008,
+      "variants": [
+        {
+          "id": "first-class",
+          "label": "First Class",
+          "image": "assets/characters/cyclops/first-class.jpg",
+          "yearIntroduced": 2008,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — his earliest X-Men uniform."
+        },
+        {
+          "id": "classic",
+          "label": "Cyclops — Classic",
+          "image": "assets/characters/cyclops/classic.jpg",
+          "yearIntroduced": 2012,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — the modern field-leader look."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2008", "title": "Joins the X-Men", "summary": "PLACEHOLDER.", "variantId": "first-class" }
+      ]
+    },
+    {
+      "id": "logan",
+      "name": "Logan",
+      "aliases": ["Wolverine", "James Howlett"],
+      "codename": "Wolverine",
+      "status": "Active",
+      "affiliations": ["X-Men"],
+      "primaryVariantId": "wolverine",
+      "bioShort": "Healing-factor mutant with a long, murky past — PLACEHOLDER on how much of that backstory you're keeping canon on a fixed real-time timeline.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2007,
+      "variants": [
+        {
+          "id": "wolverine",
+          "label": "Wolverine — Classic",
+          "image": "assets/characters/logan/wolverine.jpg",
+          "yearIntroduced": 2007,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — X-Men uniform."
+        },
+        {
+          "id": "plainclothes",
+          "label": "Logan — Plainclothes",
+          "image": "assets/characters/logan/plainclothes.jpg",
+          "yearIntroduced": 2007,
+          "isHeroForm": false,
+          "description": "PLACEHOLDER — off-duty, claws out anyway."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2007", "title": "Joins the X-Men", "summary": "PLACEHOLDER.", "variantId": "wolverine" }
+      ]
+    },
+    {
+      "id": "black-panther",
+      "name": "T'Challa",
+      "aliases": ["Black Panther"],
+      "codename": "Black Panther",
+      "status": "Active",
+      "affiliations": ["Wakanda"],
+      "primaryVariantId": "classic",
+      "bioShort": "King and protector of Wakanda. PLACEHOLDER — add the curated backstory.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2013,
+      "variants": [
+        {
+          "id": "first-appearance",
+          "label": "First Appearance",
+          "image": "assets/characters/black-panther/first-appearance.jpg",
+          "yearIntroduced": 2013,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — an early, stealth-black suit."
+        },
+        {
+          "id": "classic",
+          "label": "Black Panther — Classic",
+          "image": "assets/characters/black-panther/classic.jpg",
+          "yearIntroduced": 2015,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER — the refined vibranium suit."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2013", "title": "Debuts as Black Panther", "summary": "PLACEHOLDER.", "variantId": "first-appearance" }
+      ]
+    },
+    {
+      "id": "daredevil",
+      "name": "Matt Murdock",
+      "aliases": ["Daredevil"],
+      "codename": "Daredevil",
+      "status": "Active",
+      "affiliations": [],
+      "primaryVariantId": "classic",
+      "bioShort": "Blind attorney by day, vigilante by night. PLACEHOLDER — add the curated backstory.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2014,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Daredevil — Classic",
+          "image": "assets/characters/daredevil/classic.jpg",
+          "yearIntroduced": 2014,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2014", "title": "Debuts as Daredevil", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "doctor-strange",
+      "name": "Stephen Strange",
+      "aliases": ["Doctor Strange"],
+      "codename": "Doctor Strange",
+      "status": "Active",
+      "affiliations": [],
+      "primaryVariantId": "classic",
+      "bioShort": "Former surgeon turned Sorcerer Supreme. PLACEHOLDER — add the curated backstory.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2015,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Doctor Strange — Classic",
+          "image": "assets/characters/doctor-strange/classic.jpg",
+          "yearIntroduced": 2015,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2015", "title": "Becomes Sorcerer Supreme", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "iron-fist",
+      "name": "Danny Rand",
+      "aliases": ["Iron Fist"],
+      "codename": "Iron Fist",
+      "status": "Active",
+      "affiliations": [],
+      "primaryVariantId": "classic",
+      "bioShort": "Master martial artist wielding the power of the Iron Fist. PLACEHOLDER — add the curated backstory.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2015,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Iron Fist — Classic",
+          "image": "assets/characters/iron-fist/classic.jpg",
+          "yearIntroduced": 2015,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2015", "title": "Returns from K'un-Lun", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "blade",
+      "name": "Eric Brooks",
+      "aliases": ["Blade"],
+      "codename": "Blade",
+      "status": "Active",
+      "affiliations": [],
+      "primaryVariantId": "classic",
+      "bioShort": "Vampire hunter. PLACEHOLDER — decide whether the supernatural side of the universe is canon here, and how much.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2017,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Blade — Classic",
+          "image": "assets/characters/blade/classic.jpg",
+          "yearIntroduced": 2017,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2017", "title": "Debuts as Blade", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "ghost-rider",
+      "name": "Ghost Rider",
+      "aliases": [],
+      "codename": "Ghost Rider",
+      "status": "Active",
+      "affiliations": [],
+      "primaryVariantId": "classic",
+      "bioShort": "Bonded to the Spirit of Vengeance. PLACEHOLDER — decide whose identity (Johnny Blaze, Robbie Reyes, another) this is on this timeline.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2018,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Ghost Rider — Classic",
+          "image": "assets/characters/ghost-rider/classic.jpg",
+          "yearIntroduced": 2018,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2018", "title": "Bonds with the Spirit of Vengeance", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "nick-fury",
+      "name": "Nick Fury",
+      "aliases": [],
+      "codename": "Director Fury",
+      "status": "Active",
+      "affiliations": ["S.H.I.E.L.D."],
+      "primaryVariantId": "classic",
+      "bioShort": "Director of S.H.I.E.L.D., in position before the Avengers ever formed. PLACEHOLDER — add the curated backstory.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2005,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Nick Fury — Classic",
+          "image": "assets/characters/nick-fury/classic.jpg",
+          "yearIntroduced": 2005,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2005", "title": "Leads S.H.I.E.L.D.", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "loki",
+      "name": "Loki",
+      "aliases": [],
+      "codename": "Loki",
+      "status": "Anti-Hero",
+      "affiliations": ["Asgard"],
+      "primaryVariantId": "classic",
+      "bioShort": "Asgardian god of mischief. PLACEHOLDER — decide how villainous vs. redeemable he is on this timeline.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2010,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Loki — Classic",
+          "image": "assets/characters/loki/classic.jpg",
+          "yearIntroduced": 2010,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2010", "title": "First clashes with Thor on Earth", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "doctor-doom",
+      "name": "Victor von Doom",
+      "aliases": ["Doctor Doom"],
+      "codename": "Doctor Doom",
+      "status": "Hostile",
+      "affiliations": ["Latveria"],
+      "primaryVariantId": "classic",
+      "bioShort": "Ruler of Latveria and longtime Fantastic Four antagonist. PLACEHOLDER — add the curated backstory.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2016,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Doctor Doom — Classic",
+          "image": "assets/characters/doctor-doom/classic.jpg",
+          "yearIntroduced": 2016,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2016", "title": "First clash with the Fantastic Four", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "venom",
+      "name": "Eddie Brock",
+      "aliases": ["Venom"],
+      "codename": "Venom",
+      "status": "Anti-Hero",
+      "affiliations": [],
+      "primaryVariantId": "classic",
+      "bioShort": "Bonded to an alien symbiote, tangled up with Spider-Man's history. PLACEHOLDER — add the curated backstory.",
       "bioLong": "PLACEHOLDER — curated origin/history.",
       "firstAppearanceYear": 2019,
       "variants": [
         {
           "id": "classic",
-          "label": "Black Widow — Classic",
-          "image": "assets/characters/black-widow/classic.png",
+          "label": "Venom — Classic",
+          "image": "assets/characters/venom/classic.jpg",
           "yearIntroduced": 2019,
           "isHeroForm": true,
           "description": "PLACEHOLDER."
         }
       ],
       "timelineEvents": [
-        { "date": "2019", "title": "Joins the Avengers", "summary": "PLACEHOLDER.", "variantId": "classic" }
+        { "date": "2019", "title": "Bonds with the symbiote", "summary": "PLACEHOLDER.", "variantId": "classic" }
+      ]
+    },
+    {
+      "id": "carnage",
+      "name": "Cletus Kasady",
+      "aliases": ["Carnage"],
+      "codename": "Carnage",
+      "status": "Hostile",
+      "affiliations": [],
+      "primaryVariantId": "classic",
+      "bioShort": "Symbiote offshoot of Venom, considerably more violent. PLACEHOLDER — add the curated backstory.",
+      "bioLong": "PLACEHOLDER — curated origin/history.",
+      "firstAppearanceYear": 2021,
+      "variants": [
+        {
+          "id": "classic",
+          "label": "Carnage — Classic",
+          "image": "assets/characters/carnage/classic.jpg",
+          "yearIntroduced": 2021,
+          "isHeroForm": true,
+          "description": "PLACEHOLDER."
+        }
+      ],
+      "timelineEvents": [
+        { "date": "2021", "title": "Bonds with the Carnage symbiote", "summary": "PLACEHOLDER.", "variantId": "classic" }
       ]
     },
     {
@@ -373,19 +830,19 @@
       "primaryVariantId": "classic",
       "bioShort": "Rogue AI. PLACEHOLDER — origin (Stark tech? someone else's?) is yours to set for this continuity.",
       "bioLong": "PLACEHOLDER — curated origin/history. Not a hero — decide if/how villains get their own section distinct from the Avengers roster as the site grows.",
-      "firstAppearanceYear": 2024,
+      "firstAppearanceYear": 2022,
       "variants": [
         {
           "id": "classic",
           "label": "Ultron",
-          "image": "assets/characters/ultron/classic.png",
-          "yearIntroduced": 2024,
+          "image": "assets/characters/ultron/classic.jpg",
+          "yearIntroduced": 2022,
           "isHeroForm": true,
           "description": "PLACEHOLDER."
         }
       ],
       "timelineEvents": [
-        { "date": "2024", "title": "Activation", "summary": "PLACEHOLDER — first attack / reveal.", "variantId": "classic" }
+        { "date": "2022", "title": "Activation", "summary": "PLACEHOLDER — first attack / reveal.", "variantId": "classic" }
       ]
     }
   ],

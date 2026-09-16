@@ -141,6 +141,7 @@ main {
   aspect-ratio: 2 / 3;
   background: #000;
   overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 .card-photo img.portrait-img {
@@ -150,30 +151,23 @@ main {
   display: block;
 }
 
-.card-photo img.overlay-frame {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
 .character-card .card-body {
   padding: 12px 14px 16px;
   border-top: 2px solid var(--marvel-red);
 }
 
-.character-card .name {
-  font-weight: 700;
-  font-size: 15px;
-}
-
-.character-card .codename {
-  font-size: 12px;
+.character-card .hero-name {
+  font-weight: 800;
+  font-size: 16px;
   color: var(--marvel-red);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.character-card .real-name {
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin-top: 2px;
 }
 
 .character-card .status-tag {
@@ -290,6 +284,7 @@ main {
   border: 1px solid var(--border);
   border-radius: 6px;
   overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 .char-header .portrait-frame img.portrait-img {
@@ -300,28 +295,20 @@ main {
   background: #000;
 }
 
-.char-header .portrait-frame img.overlay-frame {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
 .char-header .meta { flex: 1 1 320px; min-width: 260px; }
 
-.char-header .meta h1 {
+.char-header .meta .hero-name {
   margin: 4px 0 2px;
-  font-size: 30px;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--marvel-red);
   text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
-.char-header .meta .codename {
-  color: var(--marvel-red);
-  font-size: 14px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.char-header .meta .real-name {
+  font-size: 15px;
+  color: var(--text-dim);
   margin-bottom: 12px;
 }
 
@@ -360,16 +347,13 @@ main {
   overflow: hidden;
 }
 
-.variant-card.alter-ego {
-  opacity: 0.72;
-}
-
 .variant-photo {
   position: relative;
   width: 100%;
   aspect-ratio: 2 / 3;
   background: #000;
   overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 .variant-photo img.portrait-img {
@@ -379,21 +363,9 @@ main {
   display: block;
 }
 
-.variant-photo img.overlay-frame {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
 .variant-card .variant-body {
   padding: 10px 12px 14px;
   border-top: 2px solid var(--marvel-red);
-}
-
-.variant-card.alter-ego .variant-body {
-  border-top-color: var(--border);
 }
 
 .variant-card .label {
@@ -469,4 +441,37 @@ main {
   font-size: 14px;
   color: var(--text-dim);
   line-height: 1.5;
+}
+
+/* ---------- Portrait overlay treatment (shared by every photo well) ---------- */
+/* A subtle bottom vignette for legibility, a thin red top accent, and a
+   small S.H.I.E.L.D. badge watermark bottom-right. Swap assets/overlay/shield-badge.png
+   for a different mark anytime — no code changes needed. */
+
+.card-photo::before,
+.portrait-frame::before,
+.variant-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 30%),
+    linear-gradient(180deg, var(--marvel-red) 0%, var(--marvel-red) 3px, transparent 3px);
+}
+
+.card-photo img.overlay-frame,
+.portrait-frame img.overlay-frame,
+.variant-photo img.overlay-frame {
+  position: absolute;
+  z-index: 2;
+  right: 8px;
+  bottom: 8px;
+  width: 20%;
+  min-width: 28px;
+  max-width: 56px;
+  height: auto;
+  opacity: 0.9;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
+  pointer-events: none;
 }
