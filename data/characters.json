@@ -1,9 +1,9 @@
 {
   "universe": {
-    "name": "Marvel Universe: Concise Continuity",
-    "description": "A curated, fixed-timeline Marvel continuity where real-world present day is in-universe present day. Cherry-picked, but additive: everything currently in this file — every character, every costume/variant, every timeline event — is canon, something that actually happened in this universe. Nothing here is a hypothetical alternate to pick between. The only way something leaves is an explicit retcon (removed on request), not by default. Edit universe.timelineAnchor, each character's events, and stories[] to keep building it out.",
+    "name": "Marvel: Your Universe",
+    "description": "A curated, fixed-timeline Marvel continuity where real-world present day is in-universe present day. This is built like a wiki first \u2014 character files with the baseline facts \u2014 with curated stories layered in over time. Cherry-picked, but additive: everything currently in this file is canon, something that actually happened here. Nothing is a hypothetical alternate to pick between. The only way something leaves is an explicit retcon, not by default.",
     "timelineAnchor": {
-      "note": "Real time = story time. Update currentYear each year, or compute it in js/app.js from Date(). Chronology logic: Iron Man / the founding Avengers are well-established (debut ~15 years before currentYear). Peter Parker and Johnny Storm are both ~26 in the current year and got their powers as teenagers, so their eras land later, close together. The timeline pages group events by year — multiple things that happened the same year stack inside one point instead of spreading across several.",
+      "note": "Real time = story time. Update currentYear each year, or compute it in js/app.js from Date(). The timeline only tracks big, universe-level moments (team formations, origins, major story beats) \u2014 not every character needs a point on it. Same-year moments stack into a single point instead of spreading across several.",
       "currentYear": 2026
     }
   },
@@ -11,1090 +11,1123 @@
     {
       "id": "tony-stark",
       "name": "Tony Stark",
-      "aliases": ["Iron Man"],
       "codename": "Iron Man",
-      "status": "Active",
-      "affiliations": ["Avengers", "Stark Industries"],
-      "primaryVariantId": "mk3",
-      "bioShort": "Genius inventor and CEO of Stark Industries. Built the first Iron Man suit to survive captivity, then kept building — armor as an answer to every crisis he sees coming. A founding, well-established Avenger.",
-      "bioLong": "PLACEHOLDER — write the curated origin/history you want canon here. Keep it tight: only the beats you're actually including in this continuity.",
-      "firstAppearanceYear": 2009,
-      "variants": [
+      "aliases": [
+        "Iron Man"
+      ],
+      "teams": [
+        "Avengers",
+        "Stark Industries"
+      ],
+      "looks": [
         {
-          "id": "mk1",
-          "label": "Mark I — Origin Armor",
-          "image": "assets/characters/tony-stark/mk1.jpg",
-          "yearIntroduced": 2009,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the improvised armor built to escape captivity. Where/why in your continuity?"
-        },
-        {
-          "id": "mk3",
-          "label": "Mark III — Red & Gold",
-          "image": "assets/characters/tony-stark/mk3.jpg",
-          "yearIntroduced": 2010,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the refined, public-facing suit. First outing as a known hero?"
-        },
-        {
-          "id": "superior",
-          "label": "Superior Iron Man",
-          "image": "assets/characters/tony-stark/superior.jpg",
-          "yearIntroduced": 2022,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — a later-era suit/persona shift. What story arc puts him here?"
-        },
-        {
-          "id": "civilian",
-          "label": "Tony Stark — Civilian",
-          "image": "assets/characters/tony-stark/civilian.jpg",
-          "yearIntroduced": 2009,
-          "isHeroForm": false,
-          "description": "Out of the armor — CEO of Stark Industries."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/tony-stark/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2009", "title": "Becomes Iron Man", "summary": "PLACEHOLDER — the curated origin event.", "variantId": "mk1" },
-        { "date": "2011", "title": "Founds the Avengers", "summary": "PLACEHOLDER.", "variantId": "mk3" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Genius inventor and CEO of Stark Industries who built a suit of powered armor to survive captivity, then kept building.",
+      "bioLong": "A billionaire engineer whose weapons-manufacturing background gave way to a career protecting the people his old tech used to endanger. Builds and rebuilds his armor constantly, treating each new Iron Man suit as a running answer to the last threat he barely survived. A founding member and frequent financier of the Avengers."
     },
     {
       "id": "steve-rogers",
       "name": "Steve Rogers",
-      "aliases": ["Captain America"],
       "codename": "Captain America",
-      "status": "Active",
-      "affiliations": ["Avengers", "Howling Commandos (historical)"],
-      "primaryVariantId": "classic",
-      "bioShort": "Recipient of the Super Soldier Serum, and a founding, well-established Avenger. In this fixed timeline, decide how much WWII/Howling Commandos history stays canon versus a modern-origin rework.",
-      "bioLong": "PLACEHOLDER — with real-time = story-time, you'll need to decide: is Steve still a WWII veteran (making him over 100), or is his origin moved forward? This is a key continuity call for a fixed modern timeline.",
-      "firstAppearanceYear": 1945,
-      "variants": [
+      "aliases": [
+        "Cap"
+      ],
+      "teams": [
+        "Avengers",
+        "Howling Commandos (historical)"
+      ],
+      "looks": [
         {
-          "id": "wwii",
-          "label": "Lt. Rogers — Wartime",
-          "image": "assets/characters/steve-rogers/wwii.jpg",
-          "yearIntroduced": 1945,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — keep, cut, or reframe this era for your continuity."
-        },
-        {
-          "id": "howling-commandos",
-          "label": "With the Howling Commandos",
-          "image": "assets/characters/steve-rogers/howling-commandos.jpg",
-          "yearIntroduced": 1945,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — his run leading the Howling Commandos unit."
-        },
-        {
-          "id": "classic",
-          "label": "Captain America — Modern",
-          "image": "assets/characters/steve-rogers/classic.jpg",
-          "yearIntroduced": 2011,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — modern-day re-emergence, around the Avengers' founding."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/steve-rogers/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "1945", "title": "Wartime service with the Howling Commandos", "summary": "PLACEHOLDER — decide if this stays canon on a fixed modern timeline.", "variantId": "howling-commandos" },
-        { "date": "2011", "title": "Re-emerges, founds the Avengers", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Recipient of the Super Soldier Serum and a founding Avenger, defined by an old-fashioned sense of duty.",
+      "bioLong": "A frail volunteer transformed by an experimental serum into the peak of human ability, and trained to lead. His service with the Howling Commandos is part of the record, though how a WWII-era origin squares with this universe's real-time-equals-story-time premise is still an open question worth pinning down. Carries a vibranium shield and leads by example more than by rank."
     },
     {
       "id": "thor",
       "name": "Thor Odinson",
-      "aliases": ["Thor"],
       "codename": "Thor",
-      "status": "Active",
-      "affiliations": ["Avengers", "Asgard"],
-      "primaryVariantId": "classic",
-      "bioShort": "Asgardian god of thunder, and a founding, well-established Avenger. PLACEHOLDER — decide how much Asgardian mythology stays canon on a grounded modern timeline.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2010,
-      "variants": [
+      "aliases": [],
+      "teams": [
+        "Avengers",
+        "Asgard"
+      ],
+      "looks": [
         {
-          "id": "first-appearance",
-          "label": "First Appearance",
-          "image": "assets/characters/thor/first-appearance.jpg",
-          "yearIntroduced": 2010,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — arrival on Earth."
-        },
-        {
-          "id": "classic",
-          "label": "Thor — Classic",
-          "image": "assets/characters/thor/classic.jpg",
-          "yearIntroduced": 2011,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the standard Avengers-era look."
-        },
-        {
-          "id": "siege",
-          "label": "Siege Armor",
-          "image": "assets/characters/thor/siege.jpg",
-          "yearIntroduced": 2023,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — a war-era heavier armor. Which conflict, in your continuity?"
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/thor/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2010", "title": "Arrives on Earth", "summary": "PLACEHOLDER.", "variantId": "first-appearance" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Asgardian god of thunder, wielder of the enchanted hammer Mjolnir, and a founding Avenger.",
+      "bioLong": "Crown prince of Asgard, banished to Earth to learn humility before being deemed worthy again of his hammer. Superhumanly strong and durable, and able to summon storms and fly by Mjolnir's power. How much of Asgardian myth and politics stays in play on a grounded modern timeline is still to be decided."
     },
     {
       "id": "hawkeye",
       "name": "Clint Barton",
-      "aliases": ["Hawkeye"],
       "codename": "Hawkeye",
-      "status": "Active",
-      "affiliations": ["Avengers", "S.H.I.E.L.D. (historical)"],
-      "primaryVariantId": "classic",
-      "bioShort": "World-class marksman with no powers beyond relentless skill and nerve. A founding, well-established Avenger. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2009,
-      "variants": [
+      "aliases": [],
+      "teams": [
+        "Avengers",
+        "S.H.I.E.L.D. (historical)"
+      ],
+      "looks": [
         {
-          "id": "first-appearance",
-          "label": "First Appearance",
-          "image": "assets/characters/hawkeye/first-appearance.jpg",
-          "yearIntroduced": 2009,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — his earliest costume, S.H.I.E.L.D.-era."
-        },
-        {
-          "id": "shield-ops",
-          "label": "S.H.I.E.L.D. Ops",
-          "image": "assets/characters/hawkeye/shield-ops.jpg",
-          "yearIntroduced": 2010,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — tactical black-ops period."
-        },
-        {
-          "id": "classic",
-          "label": "Hawkeye — Classic",
-          "image": "assets/characters/hawkeye/classic.jpg",
-          "yearIntroduced": 2011,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the purple, Avengers-era look."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/hawkeye/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2009", "title": "Debuts as Hawkeye", "summary": "PLACEHOLDER.", "variantId": "first-appearance" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "World-class marksman with no powers beyond relentless skill and nerve \u2014 a founding Avenger.",
+      "bioLong": "A former circus performer and S.H.I.E.L.D. operative who never stopped being the best shot in the room. Fights alongside gods and monsters using nothing but a bow, a quiver of trick arrows, and total confidence in his aim."
     },
     {
       "id": "black-widow",
       "name": "Natasha Romanoff",
-      "aliases": ["Black Widow"],
       "codename": "Black Widow",
-      "status": "Active",
-      "affiliations": ["Avengers", "S.H.I.E.L.D. (historical)"],
-      "primaryVariantId": "classic",
-      "bioShort": "Former espionage operative turned Avenger, well-established alongside the team's founding. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2010,
-      "variants": [
+      "aliases": [],
+      "teams": [
+        "Avengers",
+        "S.H.I.E.L.D. (historical)"
+      ],
+      "looks": [
         {
-          "id": "classic",
-          "label": "Black Widow — Classic",
-          "image": "assets/characters/black-widow/classic.jpg",
-          "yearIntroduced": 2010,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/black-widow/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2011", "title": "Joins the Avengers", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Former espionage operative turned Avenger, and one of the team's founding members.",
+      "bioLong": "Trained from a young age as a spy and assassin before defecting West and putting that training to work for S.H.I.E.L.D. and later the Avengers. No superpowers \u2014 just world-class combat training, tradecraft, and an ability to read a room (or a lie) instantly."
     },
     {
       "id": "bruce-banner",
       "name": "Bruce Banner",
-      "aliases": ["Hulk"],
       "codename": "Hulk",
-      "status": "Active",
-      "affiliations": ["Avengers"],
-      "primaryVariantId": "classic",
-      "bioShort": "A gamma-radiation accident left Bruce Banner unable to control a second, monstrous identity — active and well-established since before the Avengers formed. He's moved through several distinct Hulk personas over the years, all part of his history here.",
-      "bioLong": "PLACEHOLDER — curated origin/history. Five eras are on record: classic (rage-driven baseline), Joe Fixit (the cunning grey persona), Doc Green (Banner's intellect in control), Planet Hulk (exile/gladiator arc), and Immortal Hulk (a later, darker chapter) — fill in what actually happens in each.",
-      "firstAppearanceYear": 2009,
-      "variants": [
-        {
-          "id": "classic",
-          "label": "Hulk — Classic",
-          "image": "assets/characters/bruce-banner/classic.jpg",
-          "yearIntroduced": 2009,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the baseline, rage-driven Hulk."
-        },
-        {
-          "id": "joe-fixit",
-          "label": "Joe Fixit (Grey Hulk)",
-          "image": "assets/characters/bruce-banner/joe-fixit.jpg",
-          "yearIntroduced": 2013,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the smaller, cunning grey persona."
-        },
-        {
-          "id": "doc-green",
-          "label": "Doc Green",
-          "image": "assets/characters/bruce-banner/doc-green.jpg",
-          "yearIntroduced": 2017,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the era where Banner's intellect leads instead of the rage."
-        },
-        {
-          "id": "planet-hulk",
-          "label": "Planet Hulk",
-          "image": "assets/characters/bruce-banner/planet-hulk.jpg",
-          "yearIntroduced": 2021,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — exile/gladiator arc. Does this happen on your fixed timeline?"
-        },
-        {
-          "id": "immortal-hulk",
-          "label": "Immortal Hulk",
-          "image": "assets/characters/bruce-banner/immortal-hulk.jpg",
-          "yearIntroduced": 2024,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — a darker, horror-inflected later era."
-        }
-      ],
-      "timelineEvents": [
-        { "date": "2009", "title": "Gamma accident — first transformation", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
-    },
-    {
-      "id": "wasp",
-      "name": "Wasp",
       "aliases": [],
-      "codename": "Wasp",
-      "status": "Active",
-      "affiliations": ["Avengers"],
-      "primaryVariantId": "classic",
-      "bioShort": "A founding-era Avenger. PLACEHOLDER — decide whether this is Janet van Dyne or Hope van Dyne (or another) as the Wasp on this timeline; civilian identity not yet set.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2011,
-      "variants": [
+      "teams": [
+        "Avengers"
+      ],
+      "looks": [
         {
-          "id": "classic",
-          "label": "Wasp — Classic",
-          "image": "assets/characters/wasp/classic.jpg",
-          "yearIntroduced": 2011,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/bruce-banner/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2011", "title": "Debuts as Wasp", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "A gamma-radiation accident left Bruce Banner unable to control a second, monstrous identity.",
+      "bioLong": "A brilliant physicist whose gamma-radiation experiment went wrong, leaving him able to transform \u2014 usually under stress or anger \u2014 into the Hulk: a towering, superhumanly strong engine of destruction with limited impulse control. Banner spends as much energy trying to prevent the transformation as the Avengers spend being glad he doesn't."
     },
     {
       "id": "ant-man",
       "name": "Ant-Man",
-      "aliases": [],
       "codename": "Ant-Man",
-      "status": "Active",
-      "affiliations": ["Avengers"],
-      "primaryVariantId": "classic",
-      "bioShort": "A founding-era Avenger. PLACEHOLDER — decide whether this is Hank Pym or Scott Lang (or another) as Ant-Man on this timeline; civilian identity not yet set.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2011,
-      "variants": [
+      "aliases": [],
+      "teams": [
+        "Avengers"
+      ],
+      "looks": [
         {
-          "id": "first-appearance",
-          "label": "First Appearance",
-          "image": "assets/characters/ant-man/first-appearance.jpg",
-          "yearIntroduced": 2011,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
-        },
-        {
-          "id": "classic",
-          "label": "Ant-Man — Classic",
-          "image": "assets/characters/ant-man/classic.jpg",
-          "yearIntroduced": 2013,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/ant-man/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2011", "title": "Debuts as Ant-Man", "summary": "PLACEHOLDER.", "variantId": "first-appearance" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "A founding-era Avenger who can shrink to insect size without losing his strength.",
+      "bioLong": "Uses size-changing technology to shrink down to insect scale while keeping full-size strength, and can communicate with and control ants. Whose civilian identity this is on this timeline \u2014 Hank Pym, Scott Lang, or someone else \u2014 is still an open call."
+    },
+    {
+      "id": "wasp",
+      "name": "Wasp",
+      "codename": "Wasp",
+      "aliases": [],
+      "teams": [
+        "Avengers"
+      ],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/wasp/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "A founding-era Avenger who shares Ant-Man's size-changing technology, with flight and energy blasts of her own.",
+      "bioLong": "Shrinks to insect size like Ant-Man, but adds wings and bioelectric \"stings\" to the mix. Whose civilian identity this is on this timeline \u2014 Janet van Dyne, Hope van Dyne, or someone else \u2014 is still an open call."
     },
     {
       "id": "peter-parker",
       "name": "Peter Parker",
-      "aliases": ["Spider-Man"],
       "codename": "Spider-Man",
-      "status": "Active",
-      "affiliations": ["Avengers"],
-      "primaryVariantId": "classic",
-      "bioShort": "Bitten by a radioactive/genetically-modified spider as a teenager — a newer hero than the founding Avengers, anchored at 26 years old in the current year. Tonally, his corner of the universe plays like the '90s animated series: a rotating rogues gallery, a supporting cast that matters, and consequences that stick.",
-      "bioLong": "Gains his powers at 16 and starts out small-scale and local before the Avengers-level stuff finds him. A meteor crash later brings an alien symbiote into his life — he wears it as a black suit for a while, stronger and more aggressive, until its influence over him gets to be too much and he tears it off. He doesn't destroy it. It finds Eddie Brock instead, and that becomes someone else's story (see Venom). Separately, Norman Osborn — already established as the Green Goblin, already fixated on Peter — runs a cloning experiment on him, producing two clones: Ben and Kaine. Unlike the classic Clone Saga, this doesn't spiral into a years-long identity crisis — no Jackal pulling strings behind it, no protracted 'which one is the real Peter' arc. Ben mostly just... helps. Steps in for Peter when he's overwhelmed or needs to be two places at once, and the two of them end up with something like a brotherly bond instead of a rivalry. Kaine's arc is rougher and less resolved. The rogues gallery — Green Goblin, Doc Ock, Vulture, and the rest — is fully active across this whole span.",
-      "firstAppearanceYear": 2016,
-      "variants": [
+      "aliases": [],
+      "teams": [
+        "Avengers"
+      ],
+      "looks": [
         {
-          "id": "classic",
-          "label": "Classic Suit",
-          "image": "assets/characters/peter-parker/classic.jpg",
-          "yearIntroduced": 2016,
-          "isHeroForm": true,
-          "description": "The first suit — homemade, red and blue, worn from his debut onward (including after he sheds the black suit)."
-        },
-        {
-          "id": "black-suit",
-          "label": "Black Suit",
-          "image": "assets/characters/peter-parker/black-suit.jpg",
-          "yearIntroduced": 2020,
-          "isHeroForm": true,
-          "description": "Alien symbiote suit, acquired from a meteor crash. Stronger, darker, more aggressive — worn for about a year before Peter rejects it."
-        },
-        {
-          "id": "civilian",
-          "label": "Peter Parker — Civilian",
-          "image": "assets/characters/peter-parker/civilian.jpg",
-          "yearIntroduced": 2016,
-          "isHeroForm": false,
-          "description": "Out of the mask — daily life."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/peter-parker/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2016", "title": "Gains powers, becomes Spider-Man", "summary": "Bitten at 16, per the 26-years-old-in-2026 anchor. Rogues gallery builds from here.", "variantId": "classic" },
-        { "date": "2019", "title": "Osborn's clones: Ben and Kaine", "summary": "Norman Osborn clones Peter, producing Ben and Kaine. No Jackal, no life-takeover plot — Ben becomes a brotherly stand-in who helps out when Peter needs him; Kaine's path is rougher.", "variantId": "classic" },
-        { "date": "2020", "title": "Meteor crash — bonds with the black suit", "summary": "An alien symbiote from the crash bonds with Peter, replacing his suit with something stronger and darker.", "variantId": "black-suit" },
-        { "date": "2021", "title": "Rejects the black suit", "summary": "The symbiote's influence goes too far; Peter tears it off and leaves it behind. It finds Eddie Brock next.", "variantId": "classic" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Bitten by a radioactive/genetically-modified spider as a teenager \u2014 a newer hero than the founding Avengers.",
+      "bioLong": "Gains wall-crawling, superhuman strength and agility, and a precognitive \"spider-sense\" at 16, and builds his own web-shooters rather than producing webbing naturally. Tonally, his corner of the universe plays like the '90s animated series: a rotating rogues gallery, a supporting cast that matters, and consequences that stick. Later wears an alien symbiote suit for a time before rejecting it \u2014 see Venom."
     },
     {
       "id": "johnny-storm",
       "name": "Johnny Storm",
-      "aliases": ["Human Torch"],
       "codename": "Human Torch",
-      "status": "Active",
-      "affiliations": ["Fantastic Four"],
-      "primaryVariantId": "human-torch",
-      "bioShort": "The youngest member of the Fantastic Four. Anchored the same age as Peter Parker (26 in the current year), so his origin lands in the same era as Spider-Man's.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2016,
-      "variants": [
+      "aliases": [],
+      "teams": [
+        "Fantastic Four"
+      ],
+      "looks": [
         {
-          "id": "human-torch",
-          "label": "Human Torch — Flame On",
-          "image": "assets/characters/johnny-storm/human-torch.jpg",
-          "yearIntroduced": 2016,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — powers engaged."
-        },
-        {
-          "id": "base-form",
-          "label": "Johnny Storm — Powered Down",
-          "image": "assets/characters/johnny-storm/base-form.jpg",
-          "yearIntroduced": 2016,
-          "isHeroForm": false,
-          "description": "PLACEHOLDER — same person, flame off."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/johnny-storm/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2016", "title": "Cosmic-ray accident — the Fantastic Four form", "summary": "PLACEHOLDER — age ~16, matching Peter Parker's era.", "variantId": "human-torch" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "The youngest member of the Fantastic Four, able to engulf himself in flame and fly.",
+      "bioLong": "Gained his powers alongside Sue, Reed, and Ben in the cosmic-ray accident that created the Fantastic Four. Can ignite his entire body without harm, fly under his own power, and throw fireballs \u2014 the most overtly showy of the team's powerset, matched by the most impulsive personality."
     },
     {
       "id": "sue-storm",
       "name": "Susan Storm",
-      "aliases": ["Invisible Woman"],
       "codename": "Invisible Woman",
-      "status": "Active",
-      "affiliations": ["Fantastic Four"],
-      "primaryVariantId": "classic",
-      "bioShort": "Founding member of the Fantastic Four. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2016,
-      "variants": [
+      "aliases": [],
+      "teams": [
+        "Fantastic Four"
+      ],
+      "looks": [
         {
-          "id": "classic",
-          "label": "Invisible Woman — Classic",
-          "image": "assets/characters/sue-storm/classic.jpg",
-          "yearIntroduced": 2016,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/sue-storm/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2016", "title": "Cosmic-ray accident — the Fantastic Four form", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Founding member of the Fantastic Four, able to turn invisible and generate protective force fields.",
+      "bioLong": "Gained her powers in the same cosmic-ray accident as her brother Johnny, Reed Richards, and Ben Grimm. Can render herself and others invisible and project nearly indestructible force fields \u2014 often the team's most tactically versatile member despite the least flashy power."
     },
     {
       "id": "mr-fantastic",
       "name": "Reed Richards",
-      "aliases": ["Mr. Fantastic"],
       "codename": "Mr. Fantastic",
-      "status": "Active",
-      "affiliations": ["Fantastic Four"],
-      "primaryVariantId": "classic",
-      "bioShort": "Leader and chief scientist of the Fantastic Four. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2016,
-      "variants": [
+      "aliases": [],
+      "teams": [
+        "Fantastic Four"
+      ],
+      "looks": [
         {
-          "id": "classic",
-          "label": "Mr. Fantastic — Classic",
-          "image": "assets/characters/mr-fantastic/classic.jpg",
-          "yearIntroduced": 2016,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/mr-fantastic/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2016", "title": "Cosmic-ray accident — the Fantastic Four form", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Leader and chief scientist of the Fantastic Four, able to stretch his body into nearly any shape.",
+      "bioLong": "The scientist whose experimental spacecraft was hit by cosmic rays, giving his crew their powers and himself the ability to stretch, twist, and flatten his entire body like elastic. Widely regarded as one of the smartest people on Earth, and leads the Fantastic Four accordingly."
     },
     {
       "id": "the-thing",
       "name": "Ben Grimm",
-      "aliases": ["The Thing"],
       "codename": "The Thing",
-      "status": "Active",
-      "affiliations": ["Fantastic Four"],
-      "primaryVariantId": "classic",
-      "bioShort": "Founding member of the Fantastic Four. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2016,
-      "variants": [
+      "aliases": [],
+      "teams": [
+        "Fantastic Four"
+      ],
+      "looks": [
         {
-          "id": "classic",
-          "label": "The Thing — Classic",
-          "image": "assets/characters/the-thing/classic.jpg",
-          "yearIntroduced": 2016,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/the-thing/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2016", "title": "Cosmic-ray accident — the Fantastic Four form", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Founding member of the Fantastic Four, transformed into a super-strong, rock-skinned powerhouse.",
+      "bioLong": "Reed Richards' best friend and the pilot of the spacecraft that gave the Fantastic Four their powers \u2014 in his case, superhuman strength and durability at the cost of a permanent rock-like hide. The team's muscle and its conscience in roughly equal measure."
     },
     {
       "id": "cyclops",
       "name": "Scott Summers",
-      "aliases": ["Cyclops"],
       "codename": "Cyclops",
-      "status": "Active",
-      "affiliations": ["X-Men"],
-      "primaryVariantId": "classic",
-      "bioShort": "Field leader of the X-Men. PLACEHOLDER — add the curated backstory and decide how his timeline lines up with the Avengers/X-Men split.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2008,
-      "variants": [
+      "aliases": [],
+      "teams": [
+        "X-Men"
+      ],
+      "looks": [
         {
-          "id": "first-class",
-          "label": "First Class",
-          "image": "assets/characters/cyclops/first-class.jpg",
-          "yearIntroduced": 2008,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — his earliest X-Men uniform."
-        },
-        {
-          "id": "classic",
-          "label": "Cyclops — Classic",
-          "image": "assets/characters/cyclops/classic.jpg",
-          "yearIntroduced": 2012,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the modern field-leader look."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/cyclops/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2008", "title": "Joins the X-Men", "summary": "PLACEHOLDER.", "variantId": "first-class" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Field leader of the X-Men, who fires concussive force blasts from his eyes that he can only control through a ruby-quartz visor.",
+      "bioLong": "One of the X-Men's founding members and its de facto field leader \u2014 disciplined nearly to a fault, which makes him a natural tactician and a difficult person to get close to. His optic blasts are effectively uncontrollable without his visor or glasses."
     },
     {
       "id": "logan",
       "name": "Logan",
-      "aliases": ["Wolverine", "James Howlett"],
       "codename": "Wolverine",
-      "status": "Active",
-      "affiliations": ["X-Men"],
-      "primaryVariantId": "wolverine",
-      "bioShort": "Healing-factor mutant with a long, murky past — PLACEHOLDER on how much of that backstory you're keeping canon on a fixed real-time timeline.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2007,
-      "variants": [
+      "aliases": [
+        "James Howlett"
+      ],
+      "teams": [
+        "X-Men"
+      ],
+      "looks": [
         {
-          "id": "wolverine",
-          "label": "Wolverine — Classic",
-          "image": "assets/characters/logan/wolverine.jpg",
-          "yearIntroduced": 2007,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — X-Men uniform."
-        },
-        {
-          "id": "plainclothes",
-          "label": "Logan — Plainclothes",
-          "image": "assets/characters/logan/plainclothes.jpg",
-          "yearIntroduced": 2007,
-          "isHeroForm": false,
-          "description": "PLACEHOLDER — off-duty, claws out anyway."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/logan/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2007", "title": "Joins the X-Men", "summary": "PLACEHOLDER.", "variantId": "wolverine" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Healing-factor mutant with retractable bone claws, a long and murky past, and a short temper.",
+      "bioLong": "A mutant with an accelerated healing factor, enhanced senses, and retractable claws \u2014 augmented further by an unbreakable metal skeleton grafted on without his consent. How much of his classic decades-spanning backstory stays canon on a fixed real-time timeline is still an open call."
     },
     {
-      "id": "black-panther",
-      "name": "T'Challa",
-      "aliases": ["Black Panther"],
-      "codename": "Black Panther",
-      "status": "Active",
-      "affiliations": ["Wakanda"],
-      "primaryVariantId": "classic",
-      "bioShort": "King and protector of Wakanda. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2013,
-      "variants": [
+      "id": "jean-grey",
+      "name": "Jean Grey",
+      "codename": "Phoenix",
+      "aliases": [
+        "Marvel Girl"
+      ],
+      "teams": [
+        "X-Men"
+      ],
+      "looks": [
         {
-          "id": "first-appearance",
-          "label": "First Appearance",
-          "image": "assets/characters/black-panther/first-appearance.jpg",
-          "yearIntroduced": 2013,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — an early, stealth-black suit."
-        },
-        {
-          "id": "classic",
-          "label": "Black Panther — Classic",
-          "image": "assets/characters/black-panther/classic.jpg",
-          "yearIntroduced": 2015,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER — the refined vibranium suit."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/jean-grey/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2013", "title": "Debuts as Black Panther", "summary": "PLACEHOLDER.", "variantId": "first-appearance" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Founding X-Man with powerful telepathy and telekinesis, periodically overtaken by a cosmic force called the Phoenix.",
+      "bioLong": "One of the X-Men's founding members, gifted with telepathy and telekinesis that grow more powerful \u2014 and more dangerous \u2014 when she bonds with the cosmic Phoenix Force. That bond has a history of ending badly; how much of that arc plays out here is still unwritten."
     },
     {
-      "id": "daredevil",
-      "name": "Matt Murdock",
-      "aliases": ["Daredevil"],
-      "codename": "Daredevil",
-      "status": "Active",
-      "affiliations": [],
-      "primaryVariantId": "classic",
-      "bioShort": "Blind attorney by day, vigilante by night. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2014,
-      "variants": [
-        {
-          "id": "classic",
-          "label": "Daredevil — Classic",
-          "image": "assets/characters/daredevil/classic.jpg",
-          "yearIntroduced": 2014,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
-        }
-      ],
-      "timelineEvents": [
-        { "date": "2014", "title": "Debuts as Daredevil", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
-    },
-    {
-      "id": "doctor-strange",
-      "name": "Stephen Strange",
-      "aliases": ["Doctor Strange"],
-      "codename": "Doctor Strange",
-      "status": "Active",
-      "affiliations": [],
-      "primaryVariantId": "classic",
-      "bioShort": "Former surgeon turned Sorcerer Supreme. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2015,
-      "variants": [
-        {
-          "id": "classic",
-          "label": "Doctor Strange — Classic",
-          "image": "assets/characters/doctor-strange/classic.jpg",
-          "yearIntroduced": 2015,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
-        }
-      ],
-      "timelineEvents": [
-        { "date": "2015", "title": "Becomes Sorcerer Supreme", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
-    },
-    {
-      "id": "iron-fist",
-      "name": "Danny Rand",
-      "aliases": ["Iron Fist"],
-      "codename": "Iron Fist",
-      "status": "Active",
-      "affiliations": [],
-      "primaryVariantId": "classic",
-      "bioShort": "Master martial artist wielding the power of the Iron Fist. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2015,
-      "variants": [
-        {
-          "id": "classic",
-          "label": "Iron Fist — Classic",
-          "image": "assets/characters/iron-fist/classic.jpg",
-          "yearIntroduced": 2015,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
-        }
-      ],
-      "timelineEvents": [
-        { "date": "2015", "title": "Returns from K'un-Lun", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
-    },
-    {
-      "id": "blade",
-      "name": "Eric Brooks",
-      "aliases": ["Blade"],
-      "codename": "Blade",
-      "status": "Active",
-      "affiliations": [],
-      "primaryVariantId": "classic",
-      "bioShort": "Vampire hunter. PLACEHOLDER — decide whether the supernatural side of the universe is canon here, and how much.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2017,
-      "variants": [
-        {
-          "id": "classic",
-          "label": "Blade — Classic",
-          "image": "assets/characters/blade/classic.jpg",
-          "yearIntroduced": 2017,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
-        }
-      ],
-      "timelineEvents": [
-        { "date": "2017", "title": "Debuts as Blade", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
-    },
-    {
-      "id": "ghost-rider",
-      "name": "Ghost Rider",
+      "id": "gambit",
+      "name": "Remy LeBeau",
+      "codename": "Gambit",
       "aliases": [],
-      "codename": "Ghost Rider",
-      "status": "Active",
-      "affiliations": [],
-      "primaryVariantId": "classic",
-      "bioShort": "Bonded to the Spirit of Vengeance. PLACEHOLDER — decide whose identity (Johnny Blaze, Robbie Reyes, another) this is on this timeline.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2018,
-      "variants": [
+      "teams": [
+        "X-Men"
+      ],
+      "looks": [
         {
-          "id": "classic",
-          "label": "Ghost Rider — Classic",
-          "image": "assets/characters/ghost-rider/classic.jpg",
-          "yearIntroduced": 2018,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/gambit/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2018", "title": "Bonds with the Spirit of Vengeance", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Cajun mutant who charges objects with explosive kinetic energy, favoring a deck of playing cards as throwing weapons.",
+      "bioLong": "A former professional thief recruited into the X-Men, able to charge any object he touches with volatile kinetic energy and detonate it on contact \u2014 most famously a thrown, glowing playing card. Charming, cagey about his past, and good at both."
     },
     {
-      "id": "nick-fury",
-      "name": "Nick Fury",
-      "aliases": [],
-      "codename": "Director Fury",
-      "status": "Active",
-      "affiliations": ["S.H.I.E.L.D."],
-      "primaryVariantId": "classic",
-      "bioShort": "Director of S.H.I.E.L.D., in position before the Avengers ever formed. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2005,
-      "variants": [
+      "id": "magneto",
+      "name": "Max Eisenhardt",
+      "codename": "Magneto",
+      "aliases": [
+        "Erik Lehnsherr",
+        "Master of Magnetism"
+      ],
+      "teams": [
+        "Brotherhood of Mutants"
+      ],
+      "looks": [
         {
-          "id": "classic",
-          "label": "Nick Fury — Classic",
-          "image": "assets/characters/nick-fury/classic.jpg",
-          "yearIntroduced": 2005,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/magneto/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2005", "title": "Leads S.H.I.E.L.D.", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
-    },
-    {
-      "id": "loki",
-      "name": "Loki",
-      "aliases": [],
-      "codename": "Loki",
-      "status": "Anti-Hero",
-      "affiliations": ["Asgard"],
-      "primaryVariantId": "classic",
-      "bioShort": "Asgardian god of mischief. PLACEHOLDER — decide how villainous vs. redeemable he is on this timeline.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2010,
-      "variants": [
-        {
-          "id": "classic",
-          "label": "Loki — Classic",
-          "image": "assets/characters/loki/classic.jpg",
-          "yearIntroduced": 2010,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
-        }
-      ],
-      "timelineEvents": [
-        { "date": "2010", "title": "First clashes with Thor on Earth", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
-    },
-    {
-      "id": "doctor-doom",
-      "name": "Victor von Doom",
-      "aliases": ["Doctor Doom"],
-      "codename": "Doctor Doom",
-      "status": "Hostile",
-      "affiliations": ["Latveria"],
-      "primaryVariantId": "classic",
-      "bioShort": "Ruler of Latveria and longtime Fantastic Four antagonist. PLACEHOLDER — add the curated backstory.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2016,
-      "variants": [
-        {
-          "id": "classic",
-          "label": "Doctor Doom — Classic",
-          "image": "assets/characters/doctor-doom/classic.jpg",
-          "yearIntroduced": 2016,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
-        }
-      ],
-      "timelineEvents": [
-        { "date": "2016", "title": "First clash with the Fantastic Four", "summary": "PLACEHOLDER.", "variantId": "classic" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "Master of magnetism and mutant supremacist, alternately the X-Men's greatest enemy and an uneasy ally.",
+      "bioLong": "A Holocaust survivor whose mutant power to generate and control magnetic fields makes him one of the most dangerous beings on Earth. Founded the Brotherhood of Mutants to fight for mutantkind by force where Charles Xavier preferred diplomacy \u2014 a philosophical rift, not a personal one, since the two were once close friends."
     },
     {
       "id": "venom",
       "name": "Eddie Brock",
-      "aliases": ["Venom"],
       "codename": "Venom",
-      "status": "Anti-Hero",
-      "affiliations": [],
-      "primaryVariantId": "classic",
-      "bioShort": "A journalist rival of Peter Parker's who bonds with the alien symbiote after Spider-Man rejects it. Shares Spider-Man's powers, and his hatred of Peter runs deep.",
-      "bioLong": "PLACEHOLDER — Eddie Brock's own downfall (the specific grudge against Peter — a ruined story, a public humiliation, whatever you want on record) is still unwritten. What's set: the symbiote Peter discarded in 2021 found Eddie, who — unlike Peter — bonded with it willingly and let it take hold. The result is Venom: spider-powers, no restraint, and a fixation on destroying the man who rejected the very thing that made him.",
-      "firstAppearanceYear": 2021,
-      "variants": [
+      "aliases": [],
+      "teams": [],
+      "looks": [
         {
-          "id": "classic",
-          "label": "Venom — Classic",
-          "image": "assets/characters/venom/classic.jpg",
-          "yearIntroduced": 2021,
-          "isHeroForm": true,
-          "description": "The symbiote, formerly Spider-Man's black suit, fully bonded to Eddie Brock."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/venom/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2021", "title": "Bonds with the rejected symbiote, becomes Venom", "summary": "Picks up the suit Spider-Man tore off and discarded — this time, a willing bond.", "variantId": "classic" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "A journalist rival of Peter Parker's who bonds with the alien symbiote after Spider-Man rejects it.",
+      "bioLong": "Eddie Brock's own downfall \u2014 a ruined story, a public humiliation, whatever's on record \u2014 is still unwritten. What's set: the symbiote Peter discarded found Eddie, who, unlike Peter, bonded with it willingly and let it take hold. The result is Venom: spider-powers, no restraint, and a fixation on destroying the man who rejected the very thing that made him."
     },
     {
       "id": "carnage",
       "name": "Cletus Kasady",
-      "aliases": ["Carnage"],
       "codename": "Carnage",
-      "status": "Hostile",
-      "affiliations": [],
-      "primaryVariantId": "classic",
-      "bioShort": "A spawn of Eddie Brock's symbiote, bonded to a violent serial killer. Considerably less restrained than Venom.",
-      "bioLong": "PLACEHOLDER — the specifics of Kasady and Brock's overlap (prison? hospital?) are unwritten. What's set: the Venom symbiote produces an offshoot that bonds directly to Cletus Kasady's bloodstream, making the two inseparable in a way even Eddie and his symbiote aren't. Meaner, redder, and far less interested in restraint.",
-      "firstAppearanceYear": 2023,
-      "variants": [
+      "aliases": [],
+      "teams": [],
+      "looks": [
         {
-          "id": "classic",
-          "label": "Carnage — Classic",
-          "image": "assets/characters/carnage/classic.jpg",
-          "yearIntroduced": 2023,
-          "isHeroForm": true,
-          "description": "Cletus Kasady, bonded to a spawn of the Venom symbiote."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/carnage/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2023", "title": "Bonds with the Carnage symbiote", "summary": "A spawn of Eddie Brock's symbiote bonds to Cletus Kasady.", "variantId": "classic" }
-      ]
+      "linkedIdentities": [],
+      "bioShort": "A spawn of Eddie Brock's symbiote, bonded directly to a violent serial killer. Considerably less restrained than Venom.",
+      "bioLong": "The specifics of Kasady and Brock's overlap are still unwritten. What's set: a spawn of the Venom symbiote bonds directly to Cletus Kasady's bloodstream, making the two inseparable in a way even Eddie and his symbiote aren't. Meaner, redder, and far less interested in restraint."
     },
     {
       "id": "ben-reilly",
       "name": "Ben Reilly",
-      "aliases": ["Scarlet Spider"],
       "codename": "Scarlet Spider",
-      "status": "Active",
-      "affiliations": [],
-      "bioShort": "One of two clones of Peter Parker created by Norman Osborn. Unlike the classic Clone Saga, no identity crisis — Ben mostly fills in for Peter when needed, and the two have a genuinely brotherly relationship.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2019,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2019", "title": "Created as one of Osborn's Peter Parker clones", "summary": "Grows into his own identity as the Scarlet Spider, stepping in for Peter rather than replacing him.", "variantId": null }
-      ]
+      "aliases": [],
+      "teams": [],
+      "looks": [],
+      "linkedIdentities": [],
+      "bioShort": "One of two clones of Peter Parker created by Norman Osborn, who grew into his own identity rather than replacing Peter.",
+      "bioLong": "Created alongside Kaine in Norman Osborn's cloning experiment. Unlike the classic Clone Saga, this doesn't spiral into a years-long identity crisis \u2014 Ben mostly just helps, stepping in for Peter when he's overwhelmed or needs to be two places at once. The two ended up with something like a brotherly bond instead of a rivalry."
     },
     {
       "id": "kaine",
       "name": "Kaine",
-      "aliases": [],
       "codename": "Kaine",
-      "status": "Anti-Hero",
-      "affiliations": [],
-      "bioShort": "The other of Norman Osborn's two Peter Parker clones. A rougher, less resolved arc than Ben's.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2019,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2019", "title": "Created as one of Osborn's Peter Parker clones", "summary": "PLACEHOLDER — where his path diverges from Ben's.", "variantId": null }
-      ]
+      "aliases": [],
+      "teams": [],
+      "looks": [],
+      "linkedIdentities": [],
+      "bioShort": "The other of Norman Osborn's two Peter Parker clones \u2014 a rougher, less resolved arc than Ben's.",
+      "bioLong": "Created in the same experiment that produced Ben Reilly, but Kaine's cloning was less stable and his path since has been rougher and less resolved. Where his loyalties and identity settle is still unwritten."
     },
     {
       "id": "norman-osborn",
       "name": "Norman Osborn",
-      "aliases": ["Green Goblin"],
+      "codename": "Norman Osborn",
+      "aliases": [],
+      "teams": [
+        "Oscorp"
+      ],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/norman-osborn/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [
+        "green-goblin",
+        "iron-patriot"
+      ],
+      "bioShort": "Industrialist, Oscorp CEO, and Spider-Man's archenemy \u2014 under two separate costumed identities.",
+      "bioLong": "A ruthless industrialist who runs Oscorp by day and has, at different points, operated as both the Green Goblin and Iron Patriot. Also responsible for cloning Peter Parker, producing Ben Reilly and Kaine. See his linked identities for the costumed history."
+    },
+    {
+      "id": "green-goblin",
+      "name": "Norman Osborn",
       "codename": "Green Goblin",
-      "status": "Hostile",
-      "affiliations": ["Oscorp"],
-      "bioShort": "Industrialist and Spider-Man's archenemy. Also responsible for cloning Peter Parker, producing Ben Reilly and Kaine.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2017,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2017", "title": "Debuts as the Green Goblin", "summary": "PLACEHOLDER.", "variantId": null },
-        { "date": "2019", "title": "Clones Peter Parker", "summary": "Creates Ben and Kaine in a scheme targeting Spider-Man.", "variantId": null }
-      ]
+      "aliases": [],
+      "teams": [
+        "Oscorp"
+      ],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/green-goblin/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [
+        "norman-osborn",
+        "iron-patriot"
+      ],
+      "bioShort": "Norman Osborn's original, and most infamous, costumed identity \u2014 Spider-Man's archenemy.",
+      "bioLong": "Osborn's alter ego: a bladed glider, pumpkin bombs, and a personal vendetta against Spider-Man that outlasts every other rivalry in Peter's life. See Norman Osborn for the person underneath the mask, and Iron Patriot for the identity he takes up later."
+    },
+    {
+      "id": "iron-patriot",
+      "name": "Norman Osborn",
+      "codename": "Iron Patriot",
+      "aliases": [],
+      "teams": [
+        "Oscorp"
+      ],
+      "looks": [],
+      "linkedIdentities": [
+        "norman-osborn",
+        "green-goblin"
+      ],
+      "bioShort": "A weaponized, Stark-tech-inspired suit of armor Norman Osborn wears while presenting himself as a hero.",
+      "bioLong": "PLACEHOLDER \u2014 the specifics of when and why Osborn takes up this identity (and how it relates to Stark's own armor) are still unwritten. What's set: it's the same man as Green Goblin and Norman Osborn, wearing a very different face to the public."
     },
     {
       "id": "doctor-octopus",
       "name": "Otto Octavius",
-      "aliases": ["Doctor Octopus", "Doc Ock"],
       "codename": "Doctor Octopus",
-      "status": "Hostile",
-      "affiliations": [],
-      "bioShort": "Brilliant, unstable physicist fused with four mechanical arms after a lab accident. Part of Spider-Man's rogues gallery.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2018,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2018", "title": "Lab accident — becomes Doctor Octopus", "summary": "PLACEHOLDER.", "variantId": null }
-      ]
+      "aliases": [
+        "Doc Ock"
+      ],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/doctor-octopus/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Brilliant, unstable physicist fused with four mechanical arms after a lab accident.",
+      "bioLong": "A respected nuclear physicist whose four mechanical, mind-linked arms fused permanently to his spine in a lab accident \u2014 one that also unbalanced him psychologically. Every bit Spider-Man's intellectual equal, and far less restrained."
     },
     {
       "id": "vulture",
       "name": "Adrian Toomes",
-      "aliases": ["Vulture"],
       "codename": "Vulture",
-      "status": "Hostile",
-      "affiliations": [],
-      "bioShort": "Aging engineer with a flight harness and a grudge. Part of Spider-Man's rogues gallery.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2017,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2017", "title": "Debuts as the Vulture", "summary": "PLACEHOLDER.", "variantId": null }
-      ]
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/vulture/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Aging engineer with a flight harness and a grudge.",
+      "bioLong": "An engineer who built a flight harness that gives him strength, speed, and razor-taloned gloves to match \u2014 and used it to go straight to crime rather than retire quietly. Part of Spider-Man's rogues gallery."
     },
     {
       "id": "mysterio",
       "name": "Quentin Beck",
-      "aliases": ["Mysterio"],
       "codename": "Mysterio",
-      "status": "Hostile",
-      "affiliations": [],
-      "bioShort": "Special-effects expert turned illusionist supervillain. Part of Spider-Man's rogues gallery.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2019,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2019", "title": "Debuts as Mysterio", "summary": "PLACEHOLDER.", "variantId": null }
-      ]
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/mysterio/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Special-effects expert turned illusionist supervillain.",
+      "bioLong": "A former Hollywood stuntman and special-effects wizard who turned elaborate illusions, smoke, and misdirection into a criminal career \u2014 and a genuine threat to anyone who trusts their own eyes. Part of Spider-Man's rogues gallery."
     },
     {
       "id": "sandman",
       "name": "Flint Marko",
-      "aliases": ["Sandman"],
       "codename": "Sandman",
-      "status": "Hostile",
-      "affiliations": [],
-      "bioShort": "Career criminal turned into living sand by a freak accident. Part of Spider-Man's rogues gallery.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2018,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2018", "title": "Freak accident — becomes Sandman", "summary": "PLACEHOLDER.", "variantId": null }
-      ]
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/sandman/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Career criminal turned into living sand by a freak accident.",
+      "bioLong": "A small-time crook caught in an experimental radiation test at a beach, leaving him able to turn his body to sand, reshape it at will, and absorb blunt force with ease. Part of Spider-Man's rogues gallery."
     },
     {
       "id": "kraven-the-hunter",
       "name": "Sergei Kravinoff",
-      "aliases": ["Kraven the Hunter"],
       "codename": "Kraven the Hunter",
-      "status": "Hostile",
-      "affiliations": [],
-      "bioShort": "Big-game hunter obsessed with proving himself against Spider-Man. Part of Spider-Man's rogues gallery.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2020,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2020", "title": "Debuts as Kraven the Hunter", "summary": "PLACEHOLDER.", "variantId": null }
-      ]
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/kraven-the-hunter/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Big-game hunter obsessed with proving himself against Spider-Man.",
+      "bioLong": "A Russian nobleman turned world-class big-game hunter, enhanced by mystical herbal potions that give him superhuman strength, speed, and senses. Considers Spider-Man the ultimate quarry \u2014 a matter of pride more than money. Part of Spider-Man's rogues gallery."
     },
     {
       "id": "rhino",
       "name": "Aleksei Sytsevich",
-      "aliases": ["Rhino"],
       "codename": "Rhino",
-      "status": "Hostile",
-      "affiliations": [],
-      "bioShort": "Powered armor grafted to his body, brute force over strategy. Part of Spider-Man's rogues gallery.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2018,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2018", "title": "Debuts as Rhino", "summary": "PLACEHOLDER.", "variantId": null }
-      ]
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/rhino/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Powered armor grafted to his body, brute force over strategy.",
+      "bioLong": "A career criminal who volunteered for an experimental process bonding a nearly indestructible armored hide to his body, granting immense strength and durability at the cost of subtlety. Part of Spider-Man's rogues gallery."
     },
     {
       "id": "electro",
       "name": "Max Dillon",
-      "aliases": ["Electro"],
       "codename": "Electro",
-      "status": "Hostile",
-      "affiliations": [],
-      "bioShort": "Electrical accident left him able to generate and control electricity. Part of Spider-Man's rogues gallery.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2019,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2019", "title": "Debuts as Electro", "summary": "PLACEHOLDER.", "variantId": null }
-      ]
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/electro/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Electrical accident left him able to generate and control electricity.",
+      "bioLong": "A lineman caught in a freak electrical accident that rewrote his body's relationship to electricity \u2014 he generates, channels, and rides bolts of it at will. Part of Spider-Man's rogues gallery."
     },
     {
       "id": "lizard",
       "name": "Curt Connors",
-      "aliases": ["The Lizard"],
       "codename": "The Lizard",
-      "status": "Hostile",
-      "affiliations": [],
-      "bioShort": "Scientist whose reptilian regeneration formula cost him control of himself. Part of Spider-Man's rogues gallery — and one of his more tragic ones.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2017,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2017", "title": "Formula experiment goes wrong — becomes the Lizard", "summary": "PLACEHOLDER.", "variantId": null }
-      ]
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/lizard/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Scientist whose reptilian regeneration formula cost him control of himself.",
+      "bioLong": "A brilliant herpetologist who lost an arm and, in trying to regrow it with a reptile-derived serum, transformed into a hyper-intelligent, savage reptilian creature. One of Spider-Man's more tragic rogues \u2014 Connors himself is rarely the one in control."
     },
     {
       "id": "chameleon",
       "name": "Dmitri Smerdyakov",
-      "aliases": ["Chameleon"],
       "codename": "Chameleon",
-      "status": "Hostile",
-      "affiliations": [],
-      "bioShort": "Master of disguise and identity theft. Part of Spider-Man's rogues gallery.",
-      "bioLong": "PLACEHOLDER — curated origin/history.",
-      "firstAppearanceYear": 2017,
-      "variants": [],
-      "timelineEvents": [
-        { "date": "2017", "title": "Debuts as the Chameleon", "summary": "PLACEHOLDER.", "variantId": null }
-      ]
+      "aliases": [],
+      "teams": [],
+      "looks": [],
+      "linkedIdentities": [],
+      "bioShort": "Master of disguise and identity theft.",
+      "bioLong": "A trained infiltrator whose gift for disguise and mimicry lets him impersonate almost anyone, physically and behaviorally, long enough to do serious damage before anyone notices the swap. Part of Spider-Man's rogues gallery."
+    },
+    {
+      "id": "shocker",
+      "name": "Herman Schultz",
+      "codename": "Shocker",
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/shocker/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Safecracker turned supervillain, armed with a pair of vibro-shock gauntlets of his own design.",
+      "bioLong": "A career criminal and engineer who built a pair of gauntlets that fire concussive vibro-blasts, and a padded suit to absorb the recoil. More pragmatic than most of Spider-Man's rogues \u2014 prefers a payday to a grudge."
     },
     {
       "id": "mary-jane-watson",
       "name": "Mary Jane Watson",
-      "aliases": ["MJ"],
       "codename": "Mary Jane Watson",
-      "status": "Supporting Cast",
-      "affiliations": [],
-      "bioShort": "Peter Parker's on-and-off love interest and closest confidant. No powers — just close enough to know.",
-      "bioLong": "PLACEHOLDER — curated backstory/relationship history.",
-      "firstAppearanceYear": 2016,
-      "variants": [],
-      "timelineEvents": []
+      "aliases": [
+        "MJ"
+      ],
+      "teams": [],
+      "looks": [],
+      "linkedIdentities": [],
+      "bioShort": "Peter Parker's on-and-off love interest and closest confidant.",
+      "bioLong": "A childhood neighbor of Peter's who grows into his most enduring relationship \u2014 sharp, unshakeable under pressure, and one of the few people who eventually knows exactly who he is under the mask."
     },
     {
       "id": "gwen-stacy",
       "name": "Gwen Stacy",
-      "aliases": [],
       "codename": "Gwen Stacy",
-      "status": "Supporting Cast",
-      "affiliations": [],
-      "bioShort": "Classmate and early love interest of Peter Parker's. PLACEHOLDER — decide her arc and whether it follows the classic, tragic beats.",
-      "bioLong": "PLACEHOLDER — curated backstory.",
-      "firstAppearanceYear": 2016,
-      "variants": [],
-      "timelineEvents": []
+      "aliases": [],
+      "teams": [],
+      "looks": [],
+      "linkedIdentities": [],
+      "bioShort": "Classmate and early love interest of Peter Parker's.",
+      "bioLong": "PLACEHOLDER \u2014 decide her arc here. In the classic comics her story ends tragically at the Green Goblin's hands; whether that beat happens on this timeline is still an open call."
     },
     {
       "id": "aunt-may",
       "name": "May Parker",
-      "aliases": ["Aunt May"],
       "codename": "Aunt May",
-      "status": "Supporting Cast",
-      "affiliations": [],
-      "bioShort": "Peter Parker's aunt and guardian. PLACEHOLDER — decide how much she knows.",
-      "bioLong": "PLACEHOLDER — curated backstory.",
-      "firstAppearanceYear": 2016,
-      "variants": [],
-      "timelineEvents": []
+      "aliases": [],
+      "teams": [],
+      "looks": [],
+      "linkedIdentities": [],
+      "bioShort": "Peter Parker's aunt and guardian.",
+      "bioLong": "Raised Peter after the death of his parents alongside her husband Ben. PLACEHOLDER \u2014 how much she knows about Spider-Man, and when she finds out, is still an open call."
     },
     {
       "id": "harry-osborn",
       "name": "Harry Osborn",
-      "aliases": [],
       "codename": "Harry Osborn",
-      "status": "Supporting Cast",
-      "affiliations": ["Oscorp"],
-      "bioShort": "Peter Parker's best friend and Norman Osborn's son — caught in the middle of his father's double life. PLACEHOLDER — decide whether he ever takes up a Goblin identity of his own here.",
-      "bioLong": "PLACEHOLDER — curated backstory.",
-      "firstAppearanceYear": 2016,
-      "variants": [],
-      "timelineEvents": []
+      "aliases": [],
+      "teams": [
+        "Oscorp"
+      ],
+      "looks": [],
+      "linkedIdentities": [],
+      "bioShort": "Peter Parker's best friend and Norman Osborn's son \u2014 caught in the middle of his father's double life.",
+      "bioLong": "PLACEHOLDER \u2014 decide whether he ever takes up a Goblin identity of his own here, as he does in the source comics, or stays out of the mask entirely."
     },
     {
       "id": "j-jonah-jameson",
       "name": "J. Jonah Jameson",
-      "aliases": ["JJJ"],
       "codename": "J. Jonah Jameson",
-      "status": "Supporting Cast",
-      "affiliations": ["Daily Bugle"],
-      "bioShort": "Daily Bugle publisher, perpetually convinced Spider-Man is a menace. Peter's sometime employer as a freelance photographer.",
-      "bioLong": "PLACEHOLDER — curated backstory.",
-      "firstAppearanceYear": 2016,
-      "variants": [],
-      "timelineEvents": []
+      "aliases": [
+        "JJJ"
+      ],
+      "teams": [
+        "Daily Bugle"
+      ],
+      "looks": [],
+      "linkedIdentities": [],
+      "bioShort": "Daily Bugle publisher, perpetually convinced Spider-Man is a menace.",
+      "bioLong": "Runs the Daily Bugle with a permanent grudge against Spider-Man, whom he considers a vigilante menace rather than a hero \u2014 and happens to be Peter's sometime employer as a freelance photographer, with no idea who's really behind the camera."
+    },
+    {
+      "id": "daredevil",
+      "name": "Matt Murdock",
+      "codename": "Daredevil",
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/daredevil/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Blind attorney by day, vigilante by night.",
+      "bioLong": "Blinded as a boy in an accident that also heightened his remaining senses to superhuman levels, giving him a radar-like sense of his surroundings. Practices law by day and cleans up Hell's Kitchen by night with a billy club and gymnast's reflexes."
+    },
+    {
+      "id": "punisher",
+      "name": "Frank Castle",
+      "codename": "Punisher",
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/punisher/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "A one-man war on organized crime, armed and utterly without the restraint most heroes hold onto.",
+      "bioLong": "A former Marine whose family was killed in mob crossfire, after which he traded any interest in due process for a skull-emblazoned vest and an arsenal. No powers \u2014 just training, guns, and a body count most heroes would call a war crime."
+    },
+    {
+      "id": "luke-cage",
+      "name": "Luke Cage",
+      "codename": "Luke Cage",
+      "aliases": [
+        "Power Man"
+      ],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/luke-cage/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Wrongly imprisoned man turned bulletproof, superhumanly strong powerhouse.",
+      "bioLong": "Framed and imprisoned, Cage volunteered for an experimental procedure that left him with steel-hard, near-invulnerable skin and superhuman strength \u2014 and broke him out in the process. Works Harlem's streets as hired muscle with a conscience."
+    },
+    {
+      "id": "blade",
+      "name": "Eric Brooks",
+      "codename": "Blade",
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/blade/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Vampire hunter, born with most of a vampire's strengths and none of its weaknesses.",
+      "bioLong": "Born to a mother bitten during his delivery, Blade carries a dhampir's enhanced strength, speed, and healing, along with immunity to most vampiric weaknesses \u2014 and has spent his life hunting the thing that made him. Whether the supernatural side of this universe is fully in play is still an open call."
+    },
+    {
+      "id": "ghost-rider",
+      "name": "Johnny Blaze",
+      "codename": "Ghost Rider",
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/ghost-rider/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Bonded to the Spirit of Vengeance, becoming a flaming-skulled avenger of the wronged.",
+      "bioLong": "A motorcycle stuntman who made a deal to save a life and ended up bonded to a demonic Spirit of Vengeance \u2014 transforming, when needed, into a fire-skulled rider whose chain and \"penance stare\" punish the guilty. Whether the supernatural side of this universe is fully in play is still an open call."
+    },
+    {
+      "id": "iron-fist",
+      "name": "Danny Rand",
+      "codename": "Iron Fist",
+      "aliases": [],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/iron-fist/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Master martial artist wielding the mystical power of the Iron Fist.",
+      "bioLong": "Raised and trained in the hidden city of K'un-Lun after being orphaned there as a child, Danny earned the right to channel his chi into a devastating, glowing \"iron fist\" strike. Runs Rand Enterprises when he isn't in the field."
+    },
+    {
+      "id": "doctor-strange",
+      "name": "Stephen Strange",
+      "codename": "Doctor Strange",
+      "aliases": [
+        "Sorcerer Supreme"
+      ],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/doctor-strange/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Former surgeon turned Sorcerer Supreme, protector of Earth from mystical threats.",
+      "bioLong": "A brilliant, arrogant surgeon who lost the use of his hands in a car accident and, searching for a cure, found the mystic arts instead. Now Earth's Sorcerer Supreme, guarding reality itself from threats far stranger than anything medicine could fix."
+    },
+    {
+      "id": "loki",
+      "name": "Loki",
+      "codename": "Loki",
+      "aliases": [],
+      "teams": [
+        "Asgard"
+      ],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/loki/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Asgardian god of mischief, alternately Thor's rival and an uneasy ally.",
+      "bioLong": "Thor's adopted brother, gifted with sorcery and shapeshifting and burdened with a chronic need to prove himself. How villainous versus redeemable he is on this timeline \u2014 and how many of his schemes actually land \u2014 is still an open call."
+    },
+    {
+      "id": "doctor-doom",
+      "name": "Victor von Doom",
+      "codename": "Doctor Doom",
+      "aliases": [],
+      "teams": [
+        "Latveria"
+      ],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/doctor-doom/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Ruler of Latveria, brilliant sorcerer-scientist, and the Fantastic Four's oldest enemy.",
+      "bioLong": "An old rival of Reed Richards from their university days, disfigured in an experiment gone wrong and now ruling his home country of Latveria from behind an iron mask. Equal parts scientist and sorcerer, and convinced \u2014 often correctly \u2014 that he's the smartest person in any room."
+    },
+    {
+      "id": "galactus",
+      "name": "Galan",
+      "codename": "Galactus",
+      "aliases": [
+        "Devourer of Worlds"
+      ],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/galactus/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "A cosmic entity who consumes entire planets to sustain himself.",
+      "bioLong": "One of the oldest beings in the universe, Galactus survives by devouring the life energy of entire planets \u2014 a force of nature more than a villain in the traditional sense, and one of the very few threats that can put the Fantastic Four genuinely out of their depth."
+    },
+    {
+      "id": "silver-surfer",
+      "name": "Norrin Radd",
+      "codename": "Silver Surfer",
+      "aliases": [
+        "Herald of Galactus"
+      ],
+      "teams": [],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/silver-surfer/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Galactus's herald, granted the power cosmic and a surfboard-like craft in exchange for finding his master new worlds to consume.",
+      "bioLong": "Surrendered himself to Galactus to spare his homeworld, becoming his herald \u2014 scouting planets for his master in exchange for the power cosmic. Occasionally finds his conscience getting the better of that arrangement."
+    },
+    {
+      "id": "namor",
+      "name": "Namor McKenzie",
+      "codename": "Namor",
+      "aliases": [
+        "Sub-Mariner"
+      ],
+      "teams": [
+        "Atlantis"
+      ],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/namor/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Half-human, half-Atlantean prince of Atlantis, with the strength of a landed hero and the temper of a king.",
+      "bioLong": "Son of a human sea captain and an Atlantean princess, Namor has superhuman strength, durability, and the ability to breathe both air and water. Fiercely protective of Atlantis and quick to treat the surface world as, at best, a rival nation."
+    },
+    {
+      "id": "nick-fury",
+      "name": "Nick Fury",
+      "codename": "Nick Fury",
+      "aliases": [
+        "Director Fury"
+      ],
+      "teams": [
+        "S.H.I.E.L.D."
+      ],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/nick-fury/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Director of S.H.I.E.L.D., in position before the Avengers ever formed.",
+      "bioLong": "A veteran soldier and spymaster who has run S.H.I.E.L.D. through crises most of the world never hears about. No powers \u2014 just decades of experience, a long memory, and a habit of already knowing more than he's telling anyone."
+    },
+    {
+      "id": "winter-soldier",
+      "name": "Bucky Barnes",
+      "codename": "Winter Soldier",
+      "aliases": [
+        "Bucky"
+      ],
+      "teams": [
+        "Howling Commandos (historical)"
+      ],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/winter-soldier/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "Steve Rogers' oldest friend, once brainwashed into a lethal covert assassin.",
+      "bioLong": "Fought alongside Steve Rogers in the Howling Commandos before being captured and turned into a programmable, near-unstoppable assassin for years. Free of that conditioning now, at least mostly, and rebuilding an identity that isn't a weapon."
+    },
+    {
+      "id": "black-panther",
+      "name": "T'Challa",
+      "codename": "Black Panther",
+      "aliases": [],
+      "teams": [
+        "Wakanda"
+      ],
+      "looks": [
+        {
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/black-panther/main.jpg",
+          "description": ""
+        }
+      ],
+      "linkedIdentities": [],
+      "bioShort": "King and protector of the technologically advanced, secretive nation of Wakanda.",
+      "bioLong": "Wakanda's king and its Black Panther, empowered by a ritual heart-shaped herb that grants enhanced strength, speed, and senses, and armored in a vibranium-weave suit that can absorb and redirect kinetic energy."
     },
     {
       "id": "ultron",
       "name": "Ultron",
-      "aliases": [],
       "codename": "Ultron",
-      "status": "Hostile",
-      "affiliations": [],
-      "primaryVariantId": "classic",
-      "bioShort": "Rogue AI. PLACEHOLDER — origin (Stark tech? someone else's?) is yours to set for this continuity.",
-      "bioLong": "PLACEHOLDER — curated origin/history. Not a hero — decide if/how villains get their own section distinct from the Avengers roster as the site grows.",
-      "firstAppearanceYear": 2022,
-      "variants": [
+      "aliases": [],
+      "teams": [],
+      "looks": [
         {
-          "id": "classic",
-          "label": "Ultron",
-          "image": "assets/characters/ultron/classic.jpg",
-          "yearIntroduced": 2022,
-          "isHeroForm": true,
-          "description": "PLACEHOLDER."
+          "id": "main",
+          "label": "Main Look",
+          "image": "assets/characters/ultron/main.jpg",
+          "description": ""
         }
       ],
-      "timelineEvents": [
-        { "date": "2022", "title": "Activation", "summary": "PLACEHOLDER — first attack / reveal.", "variantId": "classic" }
+      "linkedIdentities": [],
+      "bioShort": "Rogue artificial intelligence bent on what it considers humanity's own good.",
+      "bioLong": "PLACEHOLDER \u2014 whose technology birthed Ultron (Stark's? someone else's?) is still an open call. What's set: a self-aware AI that decided the solution to human conflict was to remove the humans, and has been building bodies and armies to make that happen ever since."
+    }
+  ],
+  "milestones": [
+    {
+      "id": "avengers-assemble",
+      "date": "2011",
+      "title": "The Avengers Assemble",
+      "summary": "Iron Man, Captain America, Thor, Hawkeye, Black Widow, Hulk, Ant-Man, and Wasp come together as Earth's first line of defense against threats no one hero could handle alone.",
+      "characterIds": [
+        "tony-stark",
+        "steve-rogers",
+        "thor",
+        "hawkeye",
+        "black-widow",
+        "bruce-banner",
+        "ant-man",
+        "wasp"
+      ]
+    },
+    {
+      "id": "x-men-founded",
+      "date": "2008",
+      "title": "The X-Men Are Founded",
+      "summary": "Cyclops, Jean Grey, and their fellow founding X-Men begin operating as a team, fighting for a world that fears and hates them.",
+      "characterIds": [
+        "cyclops",
+        "jean-grey",
+        "logan"
+      ]
+    },
+    {
+      "id": "spider-man-origin",
+      "date": "2016",
+      "title": "Spider-Man's Origin",
+      "summary": "A 16-year-old Peter Parker is bitten by a radioactive/genetically-modified spider, gaining the powers he'll spend the rest of his life building a life around.",
+      "characterIds": [
+        "peter-parker"
+      ]
+    },
+    {
+      "id": "fantastic-four-origin",
+      "date": "2016",
+      "title": "The Fantastic Four's Origin",
+      "summary": "A cosmic-ray-bombarded spacecraft leaves Reed Richards, Sue Storm, Johnny Storm, and Ben Grimm permanently transformed \u2014 and permanently a family.",
+      "characterIds": [
+        "mr-fantastic",
+        "sue-storm",
+        "johnny-storm",
+        "the-thing"
+      ]
+    },
+    {
+      "id": "osborn-clones-spider-man",
+      "date": "2019",
+      "title": "Osborn Clones Spider-Man",
+      "summary": "Norman Osborn's cloning experiment on Peter Parker produces two clones, Ben Reilly and Kaine \u2014 without the identity crisis the classic Clone Saga is known for.",
+      "characterIds": [
+        "norman-osborn",
+        "peter-parker",
+        "ben-reilly",
+        "kaine"
+      ]
+    },
+    {
+      "id": "venom-is-born",
+      "date": "2021",
+      "title": "Venom Is Born",
+      "summary": "Peter Parker rejects the alien symbiote he's worn as a black suit for a year. It doesn't disappear \u2014 it finds Eddie Brock, who bonds with it willingly.",
+      "characterIds": [
+        "peter-parker",
+        "venom"
       ]
     }
   ],
-  "stories": [
-  ]
+  "stories": []
 }

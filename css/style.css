@@ -170,14 +170,12 @@ main {
   margin-top: 2px;
 }
 
-.character-card .status-tag {
-  display: inline-block;
+.character-card .teams-line {
   margin-top: 6px;
   font-size: 11px;
   color: var(--text-dim);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 2px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 /* ---------- Horizontal timeline (shared: timeline.html + character.html) ---------- */
@@ -249,15 +247,25 @@ main {
   margin-bottom: 4px;
 }
 
+.timeline-stop .who-line {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
 .timeline-stop .who {
-  font-size: 12px;
+  font-size: 11.5px;
   color: var(--marvel-red);
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   display: inline-block;
-  margin-bottom: 6px;
+}
+
+.timeline-stop .who:not(:last-child)::after {
+  content: " · ";
+  color: var(--text-dim);
+  font-weight: 400;
 }
 
 .timeline-stop .summary {
@@ -328,6 +336,18 @@ main {
   margin-bottom: 12px;
 }
 
+.char-header .meta .alias-line {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.alias-label {
+  color: var(--text-dim);
+  opacity: 0.7;
+  margin-right: 4px;
+}
+
 .char-header .meta .tags {
   display: flex;
   gap: 8px;
@@ -341,6 +361,37 @@ main {
   border-radius: 999px;
   border: 1px solid var(--border);
   color: var(--text-dim);
+}
+
+.identity-links {
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.identity-label {
+  color: var(--text-dim);
+  opacity: 0.7;
+  margin-right: 6px;
+}
+
+.identity-chip {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--marvel-red);
+  border: 1px solid var(--marvel-red);
+  border-radius: 999px;
+  padding: 3px 12px;
+  margin: 2px 4px 2px 0;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.identity-chip:hover {
+  background: var(--marvel-red);
+  color: #fff;
 }
 
 .bio {
@@ -387,21 +438,6 @@ main {
 .variant-card .label {
   font-weight: 700;
   font-size: 14px;
-}
-
-.variant-card .role-tag {
-  display: inline-block;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-dim);
-  margin: 3px 0 6px;
-}
-
-.variant-card .year {
-  font-size: 12px;
-  color: var(--text-dim);
-  margin-bottom: 6px;
 }
 
 .variant-card .desc {
@@ -513,4 +549,70 @@ main {
   opacity: 0.9;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
   pointer-events: none;
+}
+
+/* ---------- Zoom button + lightbox ---------- */
+
+.zoom-btn {
+  position: absolute;
+  z-index: 3;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.zoom-btn:hover {
+  background: var(--marvel-red);
+  transform: scale(1.08);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 10px;
+}
+
+.lightbox-close:hover {
+  color: var(--marvel-red);
 }
